@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+	<title>Plain White</title>
+</head>
+<body>
+	<main class="container">
+		<section class="about">
+			<img src="{{ "/assets/portfolio.png" | relative_url }}" alt="portfolio">
+			<h2>{{ site.name }}</h2>
+			<p class="tagline">{{ site.tagline }}</p>
+			<ul class="social">
+				<a href="#"><li><i class="icon-github-circled"></i></li></a>
+				<a href="#"><li><i class="icon-linkedin-squared"></i></li></a>
+				<a href="#"><li><i class="icon-twitter-squared"></i></li></a>
+			</ul>
+			<p>&copy; 2019</p>
+		</section>
+		<section class="content">
+			{{ content }}
+		</section>
+	</main>
+</body>
+</html>

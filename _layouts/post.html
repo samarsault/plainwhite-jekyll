@@ -1,0 +1,20 @@
+---
+layout: default
+---
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+<div class="post-container" style="padding-left: 40px">
+<a class="post-link" href="{{ page.url | relative_url }}">
+	<h2 class="post-title">{{ page.title | escape }}</h2>
+</a>
+<div class="post-meta">
+	<ul class="post-categories">
+		{%- for tag in page.categories -%}
+		<li>{{ tag }}</li>
+		{%- endfor -%}
+	</ul>
+	<div class="post-date"><i class="icon-calendar"></i>{{ page.date | date: date_format }}</div>
+</div>
+<div class="post">
+	{{ content }}
+</div>
+</div>
