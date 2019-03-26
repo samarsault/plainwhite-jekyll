@@ -56,7 +56,8 @@ main {
 	height: 100%;
 	.about {
 		display: flex;
-		height: 75vh;
+		height: 100vh;
+		padding-bottom: 15vh;
 		@media screen and (max-width: $mobileW) {
 			height: auto;	
 			padding: 10vh 0;
