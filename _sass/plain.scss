@@ -32,6 +32,9 @@ a {
 	}
 }
 
+h2 {
+	margin: 0.7em 0;
+}
 main {
 	margin: 0 90px;
 	@media screen and (min-width: $bigScreenW) {
@@ -54,6 +57,11 @@ main {
 	}
 	display: flex;
 	height: 100%;
+	@media screen and (min-width: $mobileW + 1){
+		.content {
+			margin-left: 220px;
+		}
+	}
 	.about {
 		display: flex;
 		height: 100vh;
@@ -61,6 +69,9 @@ main {
 		@media screen and (max-width: $mobileW) {
 			height: auto;	
 			padding: 10vh 0;
+		}
+		@media screen and (min-width: $mobileW + 1) {
+			position: fixed;
 		}
 		min-width: 220px;
 		justify-content: center;
@@ -148,4 +159,14 @@ main {
 	font-weight: 300;
 	color: #222;
 	line-height: 1.9em;
+}
+
+#posts-label {
+	border-bottom: 1px solid #eee;
+	font-size: 15px;
+	color: #777;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	padding-bottom: 10px;
+	font-weight: normal;
 }
