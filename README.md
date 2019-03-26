@@ -43,12 +43,22 @@ plainwhite:
 ```
 The placeholder portfolio image can be replaced by the desired image by placing it as `assets/portfolio.png` in your jekyll website.
 
+**Google Analytics**
+
+It can be enabled by specifying your analytics id under plainwhite in `_config.yml`
+```yaml
+plainwhite:
+  analytics_id: '< YOUR ID >'
+```
+
 **Excerpts**
+
 Excerpts can be enabled by adding the following line to your `_config.yml`
 ```yaml
 show_excerpts: true
 ```
 **Layouts**
+
 - Home
 - Page
 - Post
