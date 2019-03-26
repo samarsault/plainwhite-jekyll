@@ -9,14 +9,16 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 ```javascript
 const Razorpay = require('razorpay');
 
-instance = Razorpay({
+let rzp = Razorpay({
 	key_id: 'KEY_ID',
 	secret: 'name'
 });
 
-instance.then( () => {
-	console.log("Done!");
-})
+// capture request
+rzp.capture(payment_id, cost)
+	.then(function (data) {
+		return 2;
+	})
 ```
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].

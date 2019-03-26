@@ -1,8 +1,6 @@
 title: Your awesome title
 author: GitHub User
-name: Adam Denisov
 email: your-email@domain.com
-tagline: Developer. Designer
 description: > # this means to ignore newlines until "show_exerpts:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -13,13 +11,16 @@ show_excerpts: true # set to true to show excerpts on the homepage
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 sass:
   sass_dir: _sass
-theme:
+plainwhite:
+  name: Adam Denisov
+  tagline: Developer. Designer
   date_format: "%b %-d, %Y"
 
   # generate social links in footer
   social_links:
-    twitter: jekyllrb
-    github:  jekyll
+    twitter: thelehhman
+    github:  thelehhman
+    linkedIn: in/thelehhman
     rss: rss
     # dribbble: jekyll
     # facebook: jekyll
@@ -47,7 +48,7 @@ theme:
 # - about.md
 
 # Build settings
-# theme: plainwhite
+theme: plainwhite
 
 # plugins:
 #  - jekyll-feed

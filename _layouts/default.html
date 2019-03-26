@@ -3,21 +3,22 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="{{ site.description }}">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-	<title>Plain White</title>
+	<title>{{ page.title | default: site.title }}</title>
 </head>
 <body>
 	<main class="container">
 		<section class="about">
-			<img src="{{ "/assets/portfolio.png" | relative_url }}" alt="portfolio">
-			<h2>{{ site.name }}</h2>
-			<p class="tagline">{{ site.tagline }}</p>
+			<img src="{{ "/assets/portfolio.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
+			<h2>{{ site.plainwhite.name }}</h2>
+			<p class="tagline">{{ site.plainwhite.tagline }}</p>
 			<ul class="social">
-				<a href="#"><li><i class="icon-github-circled"></i></li></a>
-				<a href="#"><li><i class="icon-linkedin-squared"></i></li></a>
-				<a href="#"><li><i class="icon-twitter-squared"></i></li></a>
+				<a href="https://github.com/{{ site.plainwhite.social_links.github }}"><li><i class="icon-github-circled"></i></li></a>
+				<a href="https://linkedin.com/{{ site.plainwhite.social_links.linkedIn }}"><li><i class="icon-linkedin-squared"></i></li></a>
+				<a href="https://twitter.com/{{ site.plainwhite.social_links.twitter }}"><li><i class="icon-twitter-squared"></i></li></a>
 			</ul>
 			<p>&copy; 2019</p>
 		</section>
