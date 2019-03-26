@@ -5,6 +5,12 @@ Simplistic jekyll portfolio-style theme for writers.
 ![plainwhite theme preview](/screenshot.png)
 
 
+## Installation on Github Pages
+
+Add this line to your site's `_config.yml`:
+```yaml
+remote_theme: thelehhman/plainwhite-jekyll
+```
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
