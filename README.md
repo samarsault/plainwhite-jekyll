@@ -41,9 +41,13 @@ plainwhite:
     github:  thelehhman
     linkedIn: in/thelehhman # format: locale/username
 ```
+
+**Updating Placeholder Image**
+
 The placeholder portfolio image can be replaced by the desired image by placing it as `assets/portfolio.png` in your jekyll website.
 
 **Comments (Disqus)**
+
 Comments on posts can be enabled by specifying your disqus_shortname under plainwhite in `_config.yml`. For example,
 ```yaml
 plainwhite:
