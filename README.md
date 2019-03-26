@@ -43,6 +43,13 @@ plainwhite:
 ```
 The placeholder portfolio image can be replaced by the desired image by placing it as `assets/portfolio.png` in your jekyll website.
 
+**Comments (Disqus)**
+Comments on posts can be enabled by specifying your disqus_shortname under plainwhite in `_config.yml`. For example,
+```yaml
+plainwhite:
+  disqus_shortname: games
+```
+
 **Google Analytics**
 
 It can be enabled by specifying your analytics id under plainwhite in `_config.yml`
