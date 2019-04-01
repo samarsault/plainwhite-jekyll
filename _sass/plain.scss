@@ -28,7 +28,7 @@ a {
 	color: #000;
 	transition: color 0.3s;
 	&:hover {
-		color: #0A59B0;
+		color: $linkColor;
 	}
 }
 
@@ -159,6 +159,16 @@ main {
 	font-weight: 300;
 	color: #222;
 	line-height: 1.9em;
+	a {
+		color: $linkColor;
+		transition: border-bottom-color 0.4s;
+		border-bottom: 2px solid rgba($linkColor, 0.5);
+		text-decoration: none;
+		padding-bottom: 0.5px;
+		&:hover {
+			border-bottom-color: rgba($linkColor, 0.75);
+		}
+	}
 }
 
 #posts-label {
