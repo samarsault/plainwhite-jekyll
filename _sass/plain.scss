@@ -6,6 +6,7 @@ $linkColor: #0A59B0;
 $mobileW: 768px;
 $smallMobileW: 480px;
 $bigScreenW: 1600px;
+$leftWidth: 220px;
 
 *,*:before,*:after {
 	box-sizing: border-box;
@@ -37,6 +38,9 @@ h2 {
 }
 main {
 	margin: 0 90px;
+	display: flex;
+	height: 100%;
+
 	@media screen and (min-width: $bigScreenW) {
 		margin: 0 auto;
 		max-width: 1440px;	
@@ -55,11 +59,11 @@ main {
 	@media screen and (max-width: $smallMobileW) {
 		margin: 0;	
 	}
-	display: flex;
-	height: 100%;
-	@media screen and (min-width: $mobileW + 1){
-		.content {
-			margin-left: 220px;
+
+	.content {
+		@media screen and (min-width: $mobileW + 1){
+			max-width: calc(100% - $leftWidth);
+			margin-left: $leftWidth;
 		}
 	}
 	.about {
@@ -73,7 +77,7 @@ main {
 		@media screen and (min-width: $mobileW + 1) {
 			position: fixed;
 		}
-		min-width: 220px;
+		min-width: $leftWidth;
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
