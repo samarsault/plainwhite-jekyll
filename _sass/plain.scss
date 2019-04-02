@@ -165,12 +165,10 @@ main {
 	line-height: 1.9em;
 	a {
 		color: $linkColor;
-		transition: border-bottom-color 0.4s;
-		border-bottom: 2px solid rgba($linkColor, 0.5);
 		text-decoration: none;
-		padding-bottom: 0.5px;
+		transition: border-bottom 0.4s;
 		&:hover {
-			border-bottom-color: rgba($linkColor, 0.75);
+			border-bottom: 0.5px solid $linkColor;
 		}
 	}
 }
