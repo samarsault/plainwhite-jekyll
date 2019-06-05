@@ -62,7 +62,7 @@ main {
 
 	.content {
 		@media screen and (min-width: $mobileW + 1){
-			max-width: calc(100% - $leftWidth);
+			max-width: calc(100% - #{$leftWidth});
 			margin-left: $leftWidth;
 		}
 	}
