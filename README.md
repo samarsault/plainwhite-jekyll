@@ -70,6 +70,15 @@ plainwhite:
   analytics_id: '< YOUR ID >'
 ```
 
+**Sitemap**
+
+It can be toggled by the following line to under plainwhite in  `_config.yml`
+
+```yaml
+plainwhite:
+  sitemap: true
+```
+
 **Excerpts**
 
 Excerpts can be enabled by adding the following line to your `_config.yml`
