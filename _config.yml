@@ -13,7 +13,7 @@ sass:
   sass_dir: _sass
 plainwhite:
   name: SIN JI SUP
-  tagline: Developer. Designer
+  tagline: non
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
 
