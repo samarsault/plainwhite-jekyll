@@ -1,6 +1,6 @@
-title: Your awesome title
+title: JIASSP
 author: GitHub User
-email: your-email@domain.com
+email: odo919@naver.com
 description: > # this means to ignore newlines until "show_exerpts:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -12,16 +12,16 @@ show_excerpts: true # set to true to show excerpts on the homepage
 sass:
   sass_dir: _sass
 plainwhite:
-  name: Adam Denisov
+  name: SIN JI SUP
   tagline: Developer. Designer
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
 
   # generate social links in footer
   social_links:
-    twitter: thelehhman
-    github:  thelehhman
-    linkedIn: in/thelehhman
+    twitter: 
+    github:  jisaap.github.io
+    linkedIn: 
     rss: rss
     # dribbble: jekyll
     # facebook: jekyll
