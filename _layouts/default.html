@@ -15,13 +15,13 @@
 				<a href="https://twitter.com/{{ site.plainwhite.social_links.twitter }}"><li><i class="icon-twitter-squared"></i></li></a>
       </ul>
       {%- if site.plainwhite.navigation -%}
-				<nav class="navigation">
-          <ul>
-            {% for link in site.plainwhite.navigation %}
-            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
-            {% endfor %}
-          </ul>
-				</nav>
+      <nav class="navigation">
+        <ul>
+          {% for link in site.plainwhite.navigation %}
+          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
       {%- endif -%}
 			<p>&copy; {{ "now" | date: "%Y" }}</p>
 		</section>
