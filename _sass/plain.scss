@@ -132,13 +132,22 @@ main {
     a {
       display: block;
       text-align: center;
-      padding: 10px 0;
+      padding: 1rem 0;
       text-decoration: none;
       border-bottom: 1px solid #ececec;
+
+      @media screen and (max-width: $mobileW) {
+        padding: 2rem 0;
+      }
     }
   }
 }
 
+.post-wrapper {
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
 .post-categories {
   list-style-type: none;
   margin: 0;
