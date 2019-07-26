@@ -70,6 +70,15 @@ plainwhite:
   analytics_id: '< YOUR ID >'
 ```
 
+**Sitemap**
+
+It can be toggled by the following line to under plainwhite in  `_config.yml`
+
+```yaml
+plainwhite:
+  sitemap: true
+```
+
 **Excerpts**
 
 Excerpts can be enabled by adding the following line to your `_config.yml`
@@ -99,3 +108,6 @@ To add a custom directory to your theme-gem, please edit the regexp in `plainwhi
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
+## More themes
+
+- [Texture](https://github.com/thelehhman/texture)
