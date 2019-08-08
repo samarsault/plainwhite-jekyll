@@ -2,7 +2,6 @@
 layout: post
 title:  "Angularjs ve Json"
 categories: Javascript NodeJS
-summary: Angularjs ile Json Parse Tutorial
 date: 2017-02-26T14:05:12-05:00
 ---
 Merhaba bu yazımda sizinle genelde jquery,ajax ile yapılan Json parsing konusunu Angular Js ile anlatacağım.
