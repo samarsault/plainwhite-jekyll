@@ -1,7 +1,7 @@
 ---
-title: Angularjs ve Json
-draft: false
-weight: 4
+layout: post
+title:  "Angularjs ve Json"
+categories: Javascript NodeJS
 summary: Angularjs ile Json Parse Tutorial
 date: 2017-02-26T14:05:12-05:00
 ---
