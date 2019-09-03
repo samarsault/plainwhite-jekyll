@@ -1,184 +1,223 @@
-@import 'ext/fonts';
-@import 'ext/normalize';
-@import 'syntax';
+@import "ext/fonts";
+@import "ext/normalize";
+@import "syntax";
 
-$linkColor: #0A59B0;
+$linkColor: #0a59b0;
 $mobileW: 768px;
 $smallMobileW: 480px;
 $bigScreenW: 1600px;
 $leftWidth: 220px;
 
-*,*:before,*:after {
-	box-sizing: border-box;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 body {
-	font-family: 'Raleway', sans-serif;
-	font-size: 16px;
-	line-height: 1.2em;
-	margin: 0;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  line-height: 1.2em;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-img, embed, object, video {
-	max-width: 100%;
+img,
+embed,
+object,
+video {
+  max-width: 100%;
 }
 
 a {
-	color: #000;
-	transition: color 0.3s;
-	&:hover {
-		color: $linkColor;
-	}
+  color: #000;
+  transition: color 0.3s;
+  &:hover {
+    color: $linkColor;
+  }
 }
 
 h2 {
-	margin: 0.7em 0;
+  margin: 0.7em 0;
 }
 main {
-	margin: 0 90px;
-	display: flex;
-	height: 100%;
+  margin: 0 90px;
+  display: flex;
+  height: 100%;
 
-	@media screen and (min-width: $bigScreenW) {
-		margin: 0 auto;
-		max-width: 1440px;	
-	}
-	@media screen and (max-width: 1280px) {
-		margin: 0 75px;	
-	}
-	@media screen and (max-width: 1024px){
-		margin: 0 35px;	
-	}
+  @media screen and (min-width: $bigScreenW) {
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+  @media screen and (max-width: 1280px) {
+    margin: 0 75px;
+  }
+  @media screen and (max-width: 1024px) {
+    margin: 0 35px;
+  }
 
-	@media screen and (max-width: $mobileW) {
-		margin: 0 10px;
-		flex-direction: column;	
-	}
-	@media screen and (max-width: $smallMobileW) {
-		margin: 0;	
-	}
+  @media screen and (max-width: $mobileW) {
+    margin: 0 10px;
+    flex-direction: column;
+  }
+  @media screen and (max-width: $smallMobileW) {
+    margin: 0;
+  }
 
-	.content {
-		@media screen and (min-width: $mobileW + 1){
-			max-width: calc(100% - #{$leftWidth});
-			margin-left: $leftWidth;
-		}
-	}
-	.about {
-		display: flex;
-		height: 100vh;
-		padding-bottom: 15vh;
-		@media screen and (max-width: $mobileW) {
-			height: auto;	
-			padding: 10vh 0;
-		}
-		@media screen and (min-width: $mobileW + 1) {
-			position: fixed;
-		}
-		min-width: $leftWidth;
-		justify-content: center;
-		flex-direction: column;
-		align-items: center;
-		h2 {
-			font-size: 22px;
-			margin-top: 25px;
-			margin-bottom: 0;
-			color: #222222;
-			font-weight: normal;
-		}
-		.tagline {
-			font-size: 22px;
-			margin-top: 17px;
-			color: #aaa;
-		}
-		img {
-			max-width: 150px;
-		}
-	}
+  .content {
+    @media screen and (min-width: $mobileW + 1) {
+      max-width: calc(100% - #{$leftWidth});
+      margin-left: $leftWidth;
+    }
+  }
+  .about {
+    display: flex;
+    height: 100vh;
+    padding-bottom: 15vh;
+    @media screen and (max-width: $mobileW) {
+      height: auto;
+      padding: 10vh 0;
+    }
+    @media screen and (min-width: $mobileW + 1) {
+      position: fixed;
+    }
+    min-width: $leftWidth;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      font-size: 22px;
+      margin-top: 25px;
+      margin-bottom: 0;
+      color: #222222;
+      font-weight: normal;
+    }
+    .tagline {
+      font-size: 22px;
+      margin-top: 17px;
+      color: #aaa;
+    }
+    img {
+      max-width: 150px;
+    }
+  }
 }
 .social {
-	list-style-type: none;
-	padding: 0;
-	margin-top: 0;
-	li {
-		float: left;
-		i {
-			font-size: 34px;
-		}
-	}
+  list-style-type: none;
+  padding: 0;
+  margin-top: 0;
+  li {
+    float: left;
+    i {
+      font-size: 34px;
+    }
+  }
 }
 
+.navigation {
+  width: 80%;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 0;
+
+    li:last-child {
+      a {
+        border-bottom: 0;
+      }
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+      text-decoration: none;
+      border-bottom: 1px solid #ececec;
+
+      @media screen and (max-width: $mobileW) {
+        padding: 2rem 0;
+      }
+    }
+  }
+}
+
+.post-wrapper {
+  border-bottom: 1px solid #ececec;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
 .post-categories {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	li {
-		font-size: 14px;
-		float: left;
-		background-color: #E3E3E3;
-		padding: 5px 20px;
-		border-radius: 2px;
-		@media screen and (max-width: $mobileW){
-			margin-top: 5px;
-		}
-		margin-right: 10px;
-	}
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    font-size: 14px;
+    float: left;
+    background-color: #e3e3e3;
+    padding: 5px 20px;
+    border-radius: 2px;
+    @media screen and (max-width: $mobileW) {
+      margin-top: 5px;
+    }
+    margin-right: 10px;
+  }
 }
 .post-date {
-	margin-right: 10px;
-	color: #555;
+  margin-right: 10px;
+  color: #555;
 }
 .post-meta {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .post-link {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .post-title {
-	line-height: 1.2em;
-	font-size: 28px;
+  line-height: 1.2em;
+  font-size: 28px;
 }
-.posts, .post-container {
-	list-style-type: none;
-	margin: 45px 30px;
-	@media screen and (max-width: $smallMobileW){
-		margin-left: 20px;
-		margin-right: 20px;
-	}
-	@media screen and (max-width: $mobileW){
-		padding: 0 !important;	
-		margin-top: 0;
-	}
+.posts,
+.post-container {
+  list-style-type: none;
+  margin: 45px 30px;
+  @media screen and (max-width: $smallMobileW) {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  @media screen and (max-width: $mobileW) {
+    padding: 0 !important;
+    margin-top: 0;
+  }
 }
 .post-container {
-	padding-left: 40px;
+  padding-left: 40px;
 }
 .post {
-	font-family: 'Merriweather', sans-serif;
-	font-weight: 300;
-	color: #222;
-	line-height: 1.9em;
-	a {
-		color: $linkColor;
-		text-decoration: none;
-		transition: border-bottom 0.4s;
-		&:hover {
-			border-bottom: 0.5px solid $linkColor;
-		}
-	}
+  font-family: "Merriweather", sans-serif;
+  font-weight: 300;
+  color: #222;
+  line-height: 1.9em;
+  a {
+    color: $linkColor;
+    text-decoration: none;
+    transition: border-bottom 0.4s;
+    &:hover {
+      border-bottom: 0.5px solid $linkColor;
+    }
+  }
 }
 
 #posts-label {
-	border-bottom: 1px solid #eee;
-	font-size: 15px;
-	color: #777;
-	text-transform: uppercase;
-	letter-spacing: 0.5px;
-	padding-bottom: 10px;
-	font-weight: normal;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-bottom: 10px;
+  font-weight: normal;
 }
