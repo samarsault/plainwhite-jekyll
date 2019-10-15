@@ -64,6 +64,7 @@ main {
 		@media screen and (min-width: $mobileW + 1){
 			max-width: calc(100% - #{$leftWidth});
 			margin-left: $leftWidth;
+			width: 100%;
 		}
 	}
 	.about {
@@ -124,16 +125,25 @@ main {
 			margin-top: 5px;
 		}
 		margin-right: 10px;
+		margin-bottom: 10px;
 	}
 }
 .post-date {
 	margin-right: 10px;
 	color: #555;
+	min-width: 150px;
 }
 .post-meta {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	@media screen and (max-width: $mobileW){
+		flex-direction: column-reverse;
+		align-items: baseline;	
+		.post-date {
+			margin-bottom: 16px;
+		}
+	}
 }
 .post-link {
 	text-decoration: none;
@@ -156,7 +166,7 @@ main {
 	}
 }
 .post-container {
-	padding-left: 40px;
+	padding-left: 30px;
 }
 .post {
 	font-family: 'Merriweather', sans-serif;
