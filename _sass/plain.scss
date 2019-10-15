@@ -118,7 +118,7 @@ main {
 	li {
 		font-size: 14px;
 		float: left;
-		background-color: #E3E3E3;
+		background-color: #f0f0f0;
 		padding: 5px 20px;
 		border-radius: 2px;
 		@media screen and (max-width: $mobileW){
@@ -180,6 +180,9 @@ main {
 		&:hover {
 			border-bottom: 0.5px solid $linkColor;
 		}
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-family: Raleway, sans-serif;
 	}
 }
 
