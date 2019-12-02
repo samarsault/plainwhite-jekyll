@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Как в астраномии ведется обмен знаниеми
+title: Как в астрономии ведется обмен знаниями
 categories: [programming, general]
 tags: [python, astronomy]
 comments: true
