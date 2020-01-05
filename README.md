@@ -6,13 +6,14 @@ Simplistic jekyll portfolio-style theme for writers.
 
 ![plainwhite theme preview](/screenshot.png)
 
-
 ## Installation on Github Pages
 
 Add this line to your site's `_config.yml`:
+
 ```yaml
 remote_theme: thelehhman/plainwhite-jekyll
 ```
+
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
@@ -37,7 +38,8 @@ Or install it yourself as:
 
 ## Usage
 
-The "plainwhite" key in _config.yml is used to customize the theme data.
+The "plainwhite" key in \_config.yml is used to customize the theme data.
+
 ```yaml
 plainwhite:
   name: Adam Denisov
@@ -46,7 +48,7 @@ plainwhite:
 
   social_links:
     twitter: thelehhman
-    github:  thelehhman
+    github: thelehhman
     linkedIn: in/thelehhman # format: locale/username
 ```
 
@@ -57,6 +59,7 @@ The placeholder portfolio image can be replaced by the desired image by placing 
 **Comments (Disqus)**
 
 Comments on posts can be enabled by specifying your disqus_shortname under plainwhite in `_config.yml`. For example,
+
 ```yaml
 plainwhite:
   disqus_shortname: games
@@ -65,14 +68,15 @@ plainwhite:
 **Google Analytics**
 
 It can be enabled by specifying your analytics id under plainwhite in `_config.yml`
+
 ```yaml
 plainwhite:
-  analytics_id: '< YOUR ID >'
+  analytics_id: "< YOUR ID >"
 ```
 
 **Sitemap**
 
-It can be toggled by the following line to under plainwhite in  `_config.yml`
+It can be toggled by the following line to under plainwhite in `_config.yml`
 
 ```yaml
 plainwhite:
@@ -82,14 +86,29 @@ plainwhite:
 **Excerpts**
 
 Excerpts can be enabled by adding the following line to your `_config.yml`
+
 ```yaml
 show_excerpts: true
 ```
+
 **Layouts**
 
 - Home
 - Page
 - Post
+
+**Navigation**
+
+Navigation can be enabled by adding the following line to your `_config.yml`
+
+```yaml
+plainwhite:
+  navigation:
+    - title: My Work
+      url: "/my-work"
+    - title: Resume
+      url: "/resume"
+```
 
 ## Contributing
 

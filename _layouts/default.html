@@ -1,40 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	{%- include head.html -%}
-</head>
-<body>
-	<main class="container">
-		<section class="about">
-			<img src="{{ "/assets/portfolio.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
-			<h2>{{ site.plainwhite.name }}</h2>
-			<p class="tagline">{{ site.plainwhite.tagline }}</p>
-			<ul class="social">
-                {%- if site.plainwhite.social_links.github -%}
-				<a href="https://github.com/{{ site.plainwhite.social_links.github }}"><li><i class="icon-github-circled"></i></li></a>
-                {%- endif -%}
-                {%- if site.plainwhite.social_links.linkedIn -%}
-				<a href="https://www.linkedin.com/{{ site.plainwhite.social_links.linkedIn }}"><li><i class="icon-linkedin-squared"></i></li></a>
-                {%- endif -%}
-                {%- if site.plainwhite.social_links.twitter -%}
-                <a href="https://twitter.com/{{ site.plainwhite.social_links.twitter }}"><li><i class="icon-twitter-squared"></i></li></a>
-                {%- endif -%}
-			</ul>
-			<p>&copy; 2019</p>
-		</section>
-		<section class="content">
-			{{ content }}
-		</section>
-	</main>
-	{%- if site.plainwhite.analytics_id -%}
-	<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.plainwhite.analytics_id }}"></script>
-	<script>
+  <head>
+    {%- include head.html -%}
+  </head>
+  <body>
+    <main class="container">
+      <section class="about">
+        <a href="/"><img src="{{ "/assets/portfolio.png" | relative_url }}" alt="{{ site.plainwhite.name }}"></a>
+        <h2 id="title">
+          <a href="/">{{ site.plainwhite.name }}</a>
+        </h2>
+        <p class="tagline">{{ site.plainwhite.tagline }}</p>
+        <ul class="social">
+          {%- if site.plainwhite.social_links.github -%}
+            <a href="https://github.com/{{ site.plainwhite.social_links.github }}">
+              <li>
+                <i class="icon-github-circled"></i>
+              </li>
+            </a>
+          {%- endif -%}
+          {%- if site.plainwhite.social_links.linkedIn -%}
+            <a href="https://www.linkedin.com/{{ site.plainwhite.social_links.linkedIn }}">
+              <li>
+                <i class="icon-linkedin-squared"></i>
+              </li>
+            </a>
+          {%- endif -%}
+          {%- if site.plainwhite.social_links.twitter -%}
+            <a href="https://twitter.com/{{ site.plainwhite.social_links.twitter }}">
+              <li>
+                <i class="icon-twitter-squared"></i>
+              </li>
+            </a>
+          {%- endif -%}
+        </ul>
+
+        {%- if site.plainwhite.navigation -%}
+          <nav class="navigation">
+            <ul>
+              {% for link in site.plainwhite.navigation %}
+                <li>
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        {%- endif -%}
+
+        <p>&copy;
+          {{ "now" | date: "%Y" }}</p>
+      </section>
+      <section class="content">
+        {{ content }}
+      </section>
+    </main>
+    {%- if site.plainwhite.analytics_id -%}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.plainwhite.analytics_id }}"></script>
+      <script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
 
 		gtag('config', '{{ site.plainwhite.analytics_id }}');
 	</script>
-	{%- endif -%}
-</body>
+    {%- endif -%}
+  </body>
 </html>
