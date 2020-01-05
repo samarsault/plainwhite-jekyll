@@ -102,11 +102,12 @@ show_excerpts: true
 Navigation can be enabled by adding the following line to your `_config.yml`
 
 ```yaml
-navigation:
-  - title: My Work
-    url: "/my-work"
-  - title: Resume
-    url: "/resume"
+plainwhite:
+  navigation:
+    - title: My Work
+      url: "/my-work"
+    - title: Resume
+      url: "/resume"
 ```
 
 ## Contributing

@@ -104,6 +104,11 @@ main {
     }
   }
 }
+#title {
+  a {
+    text-decoration: none;
+  }
+}
 .social {
   list-style-type: none;
   padding: 0;
@@ -132,6 +137,7 @@ main {
 
     a {
       display: block;
+      font-family: 'Merriweather';
       text-align: center;
       padding: 1rem 0;
       text-decoration: none;
