@@ -110,6 +110,20 @@ plainwhite:
       url: "/resume"
 ```
 
+**Multiline tagline**
+
+Tagline can be multiline in this way
+
+```yaml
+plainwhite:
+  tagline: |
+  First Line. 
+
+  Second Line. 
+
+  Third Line.
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/thelehhman/plainwhite-jekyll. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
