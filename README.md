@@ -115,7 +115,8 @@ plainwhite:
 Tagline can be multiline in this way
 
 ```yaml
-tagline: |
+plainwhite:
+  tagline: |
   First Line. 
 
   Second Line. 
