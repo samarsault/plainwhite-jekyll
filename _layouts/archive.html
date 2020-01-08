@@ -1,0 +1,13 @@
+---
+layout: default
+title: Archives
+---
+
+<ul class="posts">
+  <li>
+    <h1 id="posts-label">
+      Archives of posts from {{ page.date | date: "%B %Y" }}
+    </h1>
+  </li>
+  {%- for post in page.posts -%} {%- include post.html -%} {%- endfor -%}
+</ul>

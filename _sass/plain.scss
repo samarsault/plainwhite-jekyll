@@ -98,10 +98,17 @@ main {
       font-size: 22px;
       margin-top: 17px;
       color: #aaa;
+      white-space: pre-wrap;
+      line-height: normal;
     }
     img {
       max-width: 150px;
     }
+  }
+}
+#title {
+  a {
+    text-decoration: none;
   }
 }
 .social {
@@ -132,6 +139,7 @@ main {
 
     a {
       display: block;
+      font-family: 'Merriweather';
       text-align: center;
       padding: 1rem 0;
       text-decoration: none;
