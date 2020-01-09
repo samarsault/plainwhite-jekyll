@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "plainwhite"
-  spec.version       = "0.10"
+  spec.version       = "0.11"
   spec.authors       = ["Samarjeet"]
   spec.email         = ["thelehhman@gmail.com"]
 
@@ -15,6 +15,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "jekyll", "~> 3.8.6"
   spec.add_runtime_dependency "jekyll-seo-tag", "~> 2.6.1"
   spec.add_runtime_dependency "jekyll-archives", "~> 2.2.1"
+  spec.add_runtime_dependency "jekyll-menus", "~> 0.6.1"
 
   spec.add_development_dependency "bundler", "> 1.16"
   spec.add_development_dependency "rake", "~> 12.0"

@@ -42,12 +42,12 @@
           {%- endif -%}
         </ul>
 
-        {%- if site.plainwhite.navigation -%}
+        {%- if site.menus.main -%}
           <nav class="navigation">
             <ul>
-              {% for link in site.plainwhite.navigation %}
+              {% for item in site.menus.main %}
                 <li>
-                  <a href="{{ link.url }}">{{ link.title }}</a>
+                  <a href="{{ item.url }}" title="Go to {{ item.title }}">{{ item.title }}</a>
                 </li>
               {% endfor %}
             </ul>
