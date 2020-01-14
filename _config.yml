@@ -20,9 +20,9 @@ plainwhite:
   # generate social links in footer
   social_links:
     twitter: thelehhman
-    github:  thelehhman
+    github: thelehhman
     linkedIn: in/thelehhman
-    rss: rss
+    # rss: rss
     # dribbble: jekyll
     # facebook: jekyll
     # flickr:   jekyll
@@ -35,7 +35,6 @@ plainwhite:
     # telegram: jekyll
     # googleplus: +jekyll
     # microdotblog: jekyll
-
     # Mastodon instances
     # mastodon:
     # - username: jekyll
@@ -53,4 +52,6 @@ theme: plainwhite
 
 plugins:
   - jekyll-seo-tag
-#  - jekyll-feed
+  - jekyll-menus
+  # - jekyll-archives
+  # - jekyll-feed

@@ -50,6 +50,16 @@ plainwhite:
     twitter: thelehhman
     github: thelehhman
     linkedIn: in/thelehhman # format: locale/username
+    rss: rss
+```
+
+** To enable RSS feed **
+Make sure that your projects Gemfile includes:
+
+```
+group :jekyll_plugins do
+  gem "jekyll-feed"
+end
 ```
 
 **Updating Placeholder Image**
@@ -99,7 +109,7 @@ show_excerpts: true
 
 **Navigation**
 
-Navigation can be enabled by adding the following line to your `_config.yml`
+Navigation can be enabled by adding the following line to your `_config.yml`:
 
 ```yaml
 plainwhite:
@@ -117,12 +127,46 @@ Tagline can be multiline in this way
 ```yaml
 plainwhite:
   tagline: |
-  First Line. 
+  First Line.
 
-  Second Line. 
+  Second Line.
 
   Third Line.
 ```
+
+**Archives**
+
+Archives can be enabled by adding the following line to enable the plugin in `_config.yml`:
+
+```yaml
+plugins:
+  - jekyll-archives
+```
+
+To customize the config and fully enable, you need to add the following lines to your `_config.yml`:
+
+```yaml
+jekyll-archives:
+  enabled: all
+  layout: archive
+  permalinks:
+    year: "/:year/"
+    month: "/:year/:month/"
+    day: "/:year/:month/:day/"
+    tag: "/tag/:name/"
+    category: "/category/:name/"
+```
+
+To read more information on how to customize and enable/disable archive types, SEE: https://github.com/jekyll/jekyll-archives.
+
+In order to add support for the category archive type, you must create a `category.html` in your project root, and add this content:
+
+```yaml
+---
+layout: categories
+permalink: /categories/
+title: Categories
+---
 
 ## Contributing
 

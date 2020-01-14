@@ -1,0 +1,23 @@
+<li>
+  {%- assign date_format = site.plainwhite.date_format | default: "%b %-d, %Y"
+    -%}
+  <a class="post-link" href="{{ post.url | relative_url }}">
+    <h2 class="post-title">{{ post.title | escape }}</h2>
+  </a>
+  <div class="post-meta">
+    <ul class="post-categories">
+      {%- for tag in post.categories -%}
+      <li><a href="{{ site.url }}/categories#{{ tag }}">{{ tag }}</a></li>
+      {%- endfor -%}
+    </ul>
+    <div class="post-date">
+      <a href="{{ site.url }}/{{ post.date | date: "%Y/%m" }}">
+        <i class="icon-calendar"></i>
+        {{ post.date | date: date_format }}
+      </a>
+    </div>
+  </div>
+  <div class="post">
+    {%- if site.show_excerpts -%} {{ post.excerpt }} {%- endif -%}
+  </div>
+</li>

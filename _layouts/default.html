@@ -15,7 +15,7 @@
           {%- if site.plainwhite.social_links.github -%}
             <a href="https://github.com/{{ site.plainwhite.social_links.github }}">
               <li>
-                <i class="icon-github-circled"></i>
+                <i class="icon-github-squared"></i>
               </li>
             </a>
           {%- endif -%}
@@ -33,15 +33,24 @@
               </li>
             </a>
           {%- endif -%}
+          {%- if site.plainwhite.social_links.rss -%}
+            <a href="{{ "/feed.xml" | relative_url }}">
+              <li>
+                <i class="icon-rss-squared"></i>
+              </li>
+            </a>
+          {%- endif -%}
         </ul>
 
-        {%- if site.plainwhite.navigation -%}
+        {%- if site.menus.main -%}
           <nav class="navigation">
             <ul>
-              {% for link in site.plainwhite.navigation %}
-                <li>
-                  <a href="{{ link.url }}">{{ link.title }}</a>
-                </li>
+              {% for item in site.menus.main %}
+                {%- if page.url != item.url -%}
+                  <li>
+                    <a href="{{ item.url }}" title="Go to {{ item.title }}">{{ item.title }}</a>
+                  </li>
+                {%- endif -%}
               {% endfor %}
             </ul>
           </nav>

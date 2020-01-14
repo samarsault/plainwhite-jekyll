@@ -1,0 +1,18 @@
+---
+layout: default
+title: Categories
+---
+
+<ul class="posts">
+  {% for category in site.categories %} {% capture category_name %}{{ category |
+  first }}{% endcapture %}
+  <li>
+    <a name="{{ category_name | slugize }}"></a>
+    <h1 id="posts-label">
+      Posts in the "{{ category_name }}" category
+    </h1>
+  </li>
+
+  {% for post in site.categories[category_name] %} {%- include post.html -%} {%
+  endfor %} {% endfor %}
+</ul>
