@@ -103,6 +103,7 @@ main {
     }
     img {
       max-width: 150px;
+      border-radius: 100%;
     }
   }
 }
@@ -139,7 +140,7 @@ main {
 
     a {
       display: block;
-      font-family: 'Merriweather';
+      font-family: "Merriweather";
       text-align: center;
       padding: 1rem 0;
       text-decoration: none;

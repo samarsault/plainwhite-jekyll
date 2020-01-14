@@ -45,6 +45,7 @@ plainwhite:
   name: Adam Denisov
   tagline: Developer. Designer
   date_format: "%b %-d, %Y"
+  logo: "/assets/portfolio.png"
 
   social_links:
     twitter: thelehhman
@@ -64,7 +65,12 @@ end
 
 **Updating Placeholder Image**
 
-The placeholder portfolio image can be replaced by the desired image by placing it as `assets/portfolio.png` in your jekyll website.
+The placeholder portfolio image can be replaced by the desired image by placing it as `assets/portfolio.png` in your jekyll website or by updating `_config.yml`:
+
+```yaml
+plainwhite:
+  logo: https://www.gravatar.com/avatar/<EMAIL_MD5>?s=200
+```
 
 **Comments (Disqus)**
 
@@ -188,3 +194,4 @@ The theme is available as open source under the terms of the [MIT License](https
 ## More themes
 
 - [Texture](https://github.com/thelehhman/texture)
+```
