@@ -16,6 +16,7 @@ $leftWidth: 220px;
 
 body {
   font-family: "Raleway", sans-serif;
+  font-display: swap;
   font-size: 16px;
   line-height: 1.2em;
   margin: 0;
@@ -121,6 +122,10 @@ main {
     i {
       font-size: 34px;
     }
+    span {
+      text-indent: -9999%;
+      display: block;
+    }
   }
 }
 
@@ -141,6 +146,7 @@ main {
     a {
       display: block;
       font-family: "Merriweather";
+      font-display: swap;
       text-align: center;
       padding: 1rem 0;
       text-decoration: none;
@@ -219,6 +225,7 @@ main {
 }
 .post {
   font-family: "Merriweather", sans-serif;
+  font-display: swap;
   font-weight: 300;
   color: #222;
   line-height: 1.9em;
@@ -237,6 +244,7 @@ main {
   h5,
   h6 {
     font-family: Raleway, sans-serif;
+    font-display: swap;
   }
 }
 

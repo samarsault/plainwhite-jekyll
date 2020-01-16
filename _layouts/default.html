@@ -5,6 +5,7 @@
   </head>
   <body>
     <main class="container">
+
       <section class="about">
         <a href="/"><img src="{{ site.plainwhite.logo }}" alt="{{ site.plainwhite.name }}"></a>
         <h2 id="title">
@@ -13,32 +14,36 @@
         <p class="tagline">{{ site.plainwhite.tagline }}</p>
         <ul class="social">
           {%- if site.plainwhite.social_links.github -%}
-            <a href="https://github.com/{{ site.plainwhite.social_links.github }}" name="github">
-              <li>
+            <li>
+              <a href="https://github.com/{{ site.plainwhite.social_links.github }}">
                 <i class="icon-github-squared"></i>
-              </li>
-            </a>
+                <span>Github</span>
+              </a>
+            </li>
           {%- endif -%}
           {%- if site.plainwhite.social_links.linkedIn -%}
-            <a href="https://www.linkedin.com/{{ site.plainwhite.social_links.linkedIn }}" name="linkedin">
-              <li>
+            <li>
+              <a href="https://www.linkedin.com/{{ site.plainwhite.social_links.linkedIn }}">
                 <i class="icon-linkedin-squared"></i>
-              </li>
-            </a>
+                <span>LinkedIn</span>
+              </a>
+            </li>
           {%- endif -%}
           {%- if site.plainwhite.social_links.twitter -%}
-            <a href="https://twitter.com/{{ site.plainwhite.social_links.twitter }}" name="twitter">
-              <li>
+            <li>
+              <a href="https://twitter.com/{{ site.plainwhite.social_links.twitter }}" name="twitter">
                 <i class="icon-twitter-squared"></i>
-              </li>
-            </a>
+                <span>Twitter</span>
+              </a>
+            </li>
           {%- endif -%}
           {%- if site.plainwhite.social_links.rss -%}
-            <a name="rss" href="{{ "/feed.xml" | relative_url }}">
-              <li>
+            <li>
+              <a href="{{ "/feed.xml" | relative_url }}">
                 <i class="icon-rss-squared"></i>
-              </li>
-            </a>
+                <span>RSS</span>
+              </a>
+            </li>
           {%- endif -%}
         </ul>
 
@@ -63,15 +68,10 @@
         {{ content }}
       </section>
     </main>
-    {%- if site.plainwhite.analytics_id -%}
-      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.plainwhite.analytics_id }}"></script>
-      <script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
 
-		gtag('config', '{{ site.plainwhite.analytics_id }}');
-	</script>
+    {%- if site.plainwhite.analytics_id -%}
+      {% include analytics.html %}
     {%- endif -%}
+    {% include css-include.html %}
   </body>
 </html>
