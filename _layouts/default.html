@@ -13,28 +13,28 @@
         <p class="tagline">{{ site.plainwhite.tagline }}</p>
         <ul class="social">
           {%- if site.plainwhite.social_links.github -%}
-            <a href="https://github.com/{{ site.plainwhite.social_links.github }}">
+            <a href="https://github.com/{{ site.plainwhite.social_links.github }}" name="github">
               <li>
                 <i class="icon-github-squared"></i>
               </li>
             </a>
           {%- endif -%}
           {%- if site.plainwhite.social_links.linkedIn -%}
-            <a href="https://www.linkedin.com/{{ site.plainwhite.social_links.linkedIn }}">
+            <a href="https://www.linkedin.com/{{ site.plainwhite.social_links.linkedIn }}" name="linkedin">
               <li>
                 <i class="icon-linkedin-squared"></i>
               </li>
             </a>
           {%- endif -%}
           {%- if site.plainwhite.social_links.twitter -%}
-            <a href="https://twitter.com/{{ site.plainwhite.social_links.twitter }}">
+            <a href="https://twitter.com/{{ site.plainwhite.social_links.twitter }}" name="twitter">
               <li>
                 <i class="icon-twitter-squared"></i>
               </li>
             </a>
           {%- endif -%}
           {%- if site.plainwhite.social_links.rss -%}
-            <a href="{{ "/feed.xml" | relative_url }}">
+            <a name="rss" href="{{ "/feed.xml" | relative_url }}">
               <li>
                 <i class="icon-rss-squared"></i>
               </li>
