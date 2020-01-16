@@ -2,12 +2,12 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "plainwhite"
-  spec.version       = "0.9"
-  spec.authors       = ["Samarjeet"]
-  spec.email         = ["thelehhman@gmail.com"]
+  spec.version       = "1.0"
+  spec.authors       = ["Bennie Mosher"]
+  spec.email         = ["benniemosher@gmail.com"]
 
   spec.summary       = "A portfolio style jekyll theme for writers"
-  spec.homepage      = "https://thelehhman.com/"
+  spec.homepage      = "https://benniemosher.com/"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README|404.html|sitemap.xml)!i) }
