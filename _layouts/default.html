@@ -53,7 +53,7 @@
               {% for item in site.menus.main %}
                 {%- if page.url != item.url -%}
                   <li>
-                    <a href="{{ item.url }}" title="Go to {{ item.title }}">{{ item.title }}</a>
+                    <a href="{{site.url}}/{{ item.url }}" title="Go to {{ item.title }}">{{ item.title }}</a>
                   </li>
                 {%- endif -%}
               {% endfor %}
@@ -61,7 +61,7 @@
           </nav>
         {%- endif -%}
 
-        <p>&copy;
+        <p class="copyright">&copy;
           {{ "now" | date: "%Y" }}</p>
       </section>
       <section class="content">
