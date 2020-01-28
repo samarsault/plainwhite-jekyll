@@ -59,7 +59,5 @@ plugins:
   # - jekyll-feed
 
 jekyll-minifier:
-  compress_js_templates: true
-  compress_javascript: true
   uglifier_args:
     harmony: true
