@@ -82,6 +82,7 @@ main {
     }
     @media screen and (min-width: $mobileW + 1) {
       position: fixed;
+      max-width: 285px;
     }
     min-width: $leftWidth;
     justify-content: center;
@@ -115,9 +116,13 @@ main {
   list-style-type: none;
   padding: 0;
   margin-top: 0;
-  max-width: 280px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  a {
+    margin-bottom: .5em;
+  }
   li {
-    float: left;
     i {
       font-size: 34px;
     }
