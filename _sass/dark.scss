@@ -1,9 +1,9 @@
 .dark,
 .dark *{
-	$dark_text_color: #E0E0E0;
-	$dark_link_color: #007bff;
-	background-color: #121212;
-    color: #e6e6e6;
+	$dark_text_color: #f6f6f6;
+	$dark_link_color: #4da3ff;
+	background-color: #171717;
+	color: $dark_text_color;
 	border-color: #e6e6e6;
 	
 	.icon-calendar:before { color: $dark_text_color } /* '' */
@@ -12,13 +12,13 @@
 	.icon-linkedin-squared:before { color: $dark_text_color } /* '' */
 
 	#posts-label {
-		color: $dark_text_color
+		color: $dark_text_color;
+		border-bottom: 1px solid #272727;
 	}
 
 	@import 'ext/solarized-dark';
 	.highlight, .highlight * 
 	{
-		
 		background-color: #002b36; color: #93a1a1 
 	}
 
@@ -33,8 +33,8 @@
 
 	.post-categories {
 		li {
-			background-color: $dark_text_color;
-			color: #000000;
+			background-color: #333;
+			color: #fff;
 		}
 	}
 
