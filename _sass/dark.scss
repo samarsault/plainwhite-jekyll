@@ -1,0 +1,45 @@
+.dark,
+.dark *{
+	$dark_text_color: #E0E0E0;
+	$dark_link_color: #007bff;
+	background-color: #121212;
+    color: #e6e6e6;
+	border-color: #e6e6e6;
+	
+	.icon-calendar:before { color: $dark_text_color } /* '' */
+	.icon-github-circled:before { color: $dark_text_color } /* '' */
+	.icon-twitter-squared:before { color: $dark_text_color } /* '' */
+	.icon-linkedin-squared:before { color: $dark_text_color } /* '' */
+
+	#posts-label {
+		color: $dark_text_color
+	}
+
+	@import 'ext/solarized-dark';
+	.highlight, .highlight * 
+	{
+		
+		background-color: #002b36; color: #93a1a1 
+	}
+
+	div.highlight-dark {
+		padding: 5px 20px;
+	}
+	pre.highlight-dark, code {
+		font-family: 'Consolas', Menlo, monospace;
+		line-height: 1.4em;
+		tab-size: 4;
+	}
+
+	.post-categories {
+		li {
+			background-color: $dark_text_color;
+			color: #000000;
+		}
+	}
+
+	a {
+		color: $dark_link_color;
+	}
+
+}
