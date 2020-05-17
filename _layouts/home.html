@@ -10,9 +10,26 @@ layout: default
 
 {%- if site.posts.size > 0 -%}
   <ul class="posts">
+    {% if site.plainwhite.search %}
+    <li class="posts-labelgroup" id="posts-labelgroup">
+      {% if page.url contains "wod" %}
+      <h1 id="posts-label">wod</h1>
+      {% else %}
+      <h1 id="posts-label">posts</h1>
+      {% endif %}
+      <div class="search-container">
+        <div class="search-section">
+          <i class="icon-search"></i>
+          <input type="text" name="search" id="searchbar" autocomplete="off" aria-label="search in posts">
+        </div>
+        <div class="search-results" id="search-results" data-placeholder="NO RESULTS" style="display: none;"></div>
+      </div>
+    </li>
+    {% else %}
     <li>
       <h1 id="posts-label">posts</h1>
     </li>
+    {% endif %}
 
     {%- for post in site.posts -%}
       <li>
