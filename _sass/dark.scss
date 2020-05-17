@@ -1,15 +1,14 @@
 .dark,
-.dark *{
+.dark * {
 	$dark_text_color: #f6f6f6;
 	$dark_link_color: #4da3ff;
 	background-color: #171717;
 	color: $dark_text_color;
 	border-color: #e6e6e6;
 	
-	.icon-calendar:before { color: $dark_text_color } /* '' */
-	.icon-github-circled:before { color: $dark_text_color } /* '' */
-	.icon-twitter-squared:before { color: $dark_text_color } /* '' */
-	.icon-linkedin-squared:before { color: $dark_text_color } /* '' */
+	.social [class^="icon-"] {
+		color: $dark_text_color 
+	}
 
 	#posts-label {
 		color: $dark_text_color;
@@ -19,7 +18,8 @@
 	@import 'ext/solarized-dark';
 	.highlight, .highlight * 
 	{
-		background-color: #002b36; color: #93a1a1 
+		background-color: #00080a;
+		color: #93a1a1;
 	}
 
 	div.highlight-dark {
@@ -40,6 +40,12 @@
 
 	a {
 		color: $dark_link_color;
+	}
+	#title a {
+		color: #fff;
+		&:hover {
+			color: $dark_link_color;
+		}
 	}
 
 }
