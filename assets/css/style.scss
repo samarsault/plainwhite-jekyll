@@ -2,6 +2,17 @@
 ---
 
 @import "plain";
+
+{% if site.plainwhite.search %}
+@import "search";
+{% endif %}
+
+{% if site.plainwhite.search_animation %}
+#posts-label {
+  transition: width 0.1s;
+}
+{% endif %}
+
 {%- if site.plainwhite.dark_mode -%}
   @import "toggle";
   @import "dark";
