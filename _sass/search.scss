@@ -30,6 +30,7 @@ html, body {
     font-weight: normal;
     margin: 0;
     overflow: hidden;
+    transition: width 0.1s;
   }
 
   .search-section {
@@ -72,7 +73,7 @@ html, body {
     min-width: 160px;
     width: 100%;
     min-height: 50px;
-    box-shadow: 0 4px 6px 0 rgba(32, 33, 36, 0.28);
+    box-shadow: 0 1px 2px 0 rgba(32, 33, 36, 0.28);
     z-index: 3;
     padding: 10px 0;
     font-size: 15px;
@@ -80,11 +81,11 @@ html, body {
 
     &:empty::before {
       content: attr(data-placeholder);
-      padding: 6px 25px 6px 14px;
+      padding: 8px 25px 8px 14px;
     }
 
     a {
-      padding: 6px 25px 6px 14px;
+      padding: 8px 25px 8px 14px;
       text-decoration: none;
       display: flex;
       background-color: transparent;
@@ -131,7 +132,7 @@ html, body {
     .search-section {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
-      box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+      box-shadow: 0 1px 2px 0 rgba(32,33,36,0.28);
       border: 1px solid rgba(223,225,229,0);
       border-bottom: solid 1px #eee;
       z-index: 3;

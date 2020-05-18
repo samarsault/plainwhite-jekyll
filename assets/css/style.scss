@@ -4,13 +4,7 @@
 @import "plain";
 
 {% if site.plainwhite.search %}
-@import "search";
-{% endif %}
-
-{% if site.plainwhite.search_animation %}
-#posts-label {
-  transition: width 0.1s;
-}
+  @import "search";
 {% endif %}
 
 {%- if site.plainwhite.dark_mode -%}
