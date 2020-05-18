@@ -48,4 +48,49 @@
 		}
 	}
 
+	.posts-labelgroup {
+
+		.search-results {
+			background-color: #333;
+
+			a {
+				color: white;
+
+				&:hover {
+					background-color: #171717;
+				}
+			}
+		}
+	
+		.search-section i {
+			background-color: transparent;
+		}
+	}
+	
+	.posts-labelgroup:hover {
+
+		i {
+			color: white;
+		}
+
+		input {
+			color: white;
+		}
+	}
+
+
+	.posts-labelgroup.focus-within {
+	
+		.search-section {
+			background-color: #333;
+		}
+
+		input {
+			color: $dark_text_color;
+		}
+
+		i {
+			color: white;
+		}
+	}
 }
