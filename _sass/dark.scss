@@ -94,3 +94,11 @@
 		}
 	}
 }
+.dark table {
+	th, td {
+		border: 1px solid #333;
+	}
+	th {
+		background-color: #0d0d0d;
+	}
+}

@@ -248,3 +248,13 @@ main {
     font-family: Raleway, sans-serif;
   }
 }
+table {
+  th, td {
+    padding: 8px 13px;
+    border: 1px solid #dfe2e5;
+  }
+  th {
+    background-color: #eee;
+    font-family: Raleway;
+  }
+}
