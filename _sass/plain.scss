@@ -248,6 +248,24 @@ main {
     font-family: Raleway, sans-serif;
   }
 }
+.posts-labelgroup {
+  margin: 0 0 0.67em 0;
+  display: flex;
+  align-items: baseline;
+  border-bottom: 1px solid #eee;
+}
+
+#posts-label {
+  font-size: 15px;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 10px 0;
+  font-weight: normal;
+  margin: 0;
+  overflow: hidden;
+  transition: width 0.1s;
+}
 table {
   th, td {
     padding: 8px 13px;
