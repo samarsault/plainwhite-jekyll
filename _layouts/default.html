@@ -77,6 +77,20 @@
           </li>
         </a>
         {%- endif -%}
+        {%- if site.plainwhite.social_links.telegram -%}
+        <a href=" https://t.me/{{ site.plainwhite.social_links.telegram }}">
+          <li>
+            <i class="icon-telegram"></i>
+          </li>
+        </a>
+        {%- endif -%}
+        {%- if site.plainwhite.social_links.soundcloud -%}
+        <a href=" https://soundcloud.com/{{ site.plainwhite.social_links.soundcloud }}">
+          <li>
+            <i class="icon-soundcloud"></i>
+          </li>
+        </a>
+        {%- endif -%}
       </ul>
       {%- if site.plainwhite.navigation -%}
       <nav class="navigation">

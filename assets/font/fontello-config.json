@@ -95,6 +95,18 @@
       ]
     },
     {
+      "uid": "b86600decaba538aca184421752cd640",
+      "css": "soundcloud",
+      "code": 62280,
+      "src": "entypo"
+    },
+    {
+      "uid": "531359183f9fedb14b23666f1308591f",
+      "css": "telegram",
+      "code": 62150,
+      "src": "fontawesome"
+    },
+    {
       "uid": "1f1877aff7a2cd39092fcf73c3b5e7cb",
       "css": "github-circled",
       "code": 61595,
