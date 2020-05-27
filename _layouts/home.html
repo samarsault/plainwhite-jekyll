@@ -10,8 +10,17 @@ layout: default
 
 {%- if site.posts.size > 0 -%}
   <ul class="posts">
-    <li>
+    <li class="posts-labelgroup" id="posts-labelgroup">
       <h1 id="posts-label">posts</h1>
+      {% if site.plainwhite.search %}
+      <div class="search-container">
+        <div class="search-section">
+          <i class="icon-search"></i>
+          <input type="text" name="search" id="searchbar" autocomplete="off" aria-label="search in posts">
+        </div>
+        <div class="search-results" id="search-results" data-placeholder="No Results" style="display: none;"></div>
+      </div>
+      {% endif %}
     </li>
 
     {%- for post in site.posts -%}
@@ -21,14 +30,17 @@ layout: default
           <h2 class="post-title">{{ post.title | escape }}</h2>
         </a>
         <div class="post-meta">
-          <ul class="post-categories">
-            {%- for tag in post.categories -%}
-              <li>{{ tag }}</li>
-            {%- endfor -%}
-          </ul>
           <div class="post-date">
             <i class="icon-calendar"></i>
-            {{ post.date | date: date_format }}</div>
+            {{ post.date | date: date_format }}
+          </div>
+          {%- if post.categories.size > 0-%}
+          <ul class="post-categories">
+            {%- for tag in post.categories -%}
+            <li>{{ tag }}</li>
+            {%- endfor -%}
+          </ul>
+          {%- endif -%}
         </div>
         <div class="post">
           {%- if site.show_excerpts -%}

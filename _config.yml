@@ -16,6 +16,8 @@ plainwhite:
   tagline: Developer. Designer
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
+  search: true # set to true to enable searchbar
+  dark_mode: true # set to true to add dark mode toggle
 
   # generate social links in footer
   social_links:
@@ -29,6 +31,8 @@ plainwhite:
     # pinterest: jekyll
     # youtube: jekyll
     # facebook: jekyll
+    # soundcloud: jekyll
+    # telegram: jekyll
 
     # Mastodon instances
     # mastodon:

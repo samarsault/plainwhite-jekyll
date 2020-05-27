@@ -178,7 +178,6 @@ main {
       margin-top: 5px;
     }
     margin-right: 10px;
-    margin-bottom: 10px;
   }
 }
 .post-date {
@@ -190,11 +189,12 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 30px;
   @media screen and (max-width: $mobileW) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: baseline;
     .post-date {
-      margin-bottom: 16px;
+      margin: 10px 0;
     }
   }
 }
@@ -205,6 +205,7 @@ main {
 .post-title {
   line-height: 1.2em;
   font-size: 28px;
+  margin-bottom: 10px;
 }
 .posts,
 .post-container {
@@ -227,6 +228,9 @@ main {
   font-weight: 300;
   color: #222;
   line-height: 1.9em;
+  p {
+    margin-top: 10px;
+  }
   a {
     color: $linkColor;
     text-decoration: none;
@@ -244,13 +248,31 @@ main {
     font-family: Raleway, sans-serif;
   }
 }
+.posts-labelgroup {
+  margin: 0 0 0.67em 0;
+  display: flex;
+  align-items: baseline;
+  border-bottom: 1px solid #eee;
+}
 
 #posts-label {
-  border-bottom: 1px solid #eee;
   font-size: 15px;
-  color: #777;
+  color: #555;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  padding-bottom: 10px;
+  padding: 10px 0;
   font-weight: normal;
+  margin: 0;
+  overflow: hidden;
+  transition: width 0.1s;
+}
+table {
+  th, td {
+    padding: 8px 13px;
+    border: 1px solid #dfe2e5;
+  }
+  th {
+    background-color: #eee;
+    font-family: Raleway;
+  }
 }

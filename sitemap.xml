@@ -10,7 +10,7 @@ layout: null
                 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
         <url>
             <loc>{{ site.url }}</loc>
-            <lastmod>2019-06-07T00:00:00+00:00</lastmod>
+	    <lastmod>{{ 'now' | date_to_xmlschema }}</lastmod>
             <priority>1.00</priority>
         </url>
         {%- for post in site.posts -%}

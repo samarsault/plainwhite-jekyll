@@ -110,6 +110,19 @@ plainwhite:
       url: "/resume"
 ```
 
+**Dark mode**
+
+Dark mode can be enabled by setting the `dark_mode` flag in your `_config.yml`
+
+The website will check the OS preferred color scheme and set the theme accordingly, the preference will then be saved in a cookie
+
+```yaml
+plainwhite:
+  dark_mode: true
+```
+
+![plainwhite dark theme previe](/dark.png)
+
 **Multiline tagline**
 
 Tagline can be multiline in this way
@@ -124,6 +137,17 @@ plainwhite:
   Third Line.
 ```
 
+**Search-bar**
+
+Search-bar can be enabled by adding the following line to `config.yml`
+
+```yaml
+plainwhite:
+  search: true
+```
+
+Search is powered by [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search) Jekyll plugin. A `search.json` containing post meta and contents will be generated in site root folder. Plugin JavaScript will then match for posts based on user input. More info and `search.json` customization documentation can be found in plugin repository.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/thelehhman/plainwhite-jekyll. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
@@ -136,6 +160,11 @@ Your theme is setup just like a normal Jekyll site! To test your theme, run `bun
 
 When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
 To add a custom directory to your theme-gem, please edit the regexp in `plainwhite.gemspec` accordingly.
+
+## Donation
+If this project help you reduce time to develop, you can give me a cup of coffee :) 
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/thelehhman)
 
 ## License
 
