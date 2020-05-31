@@ -65,15 +65,6 @@ plainwhite:
   disqus_shortname: games
 ```
 
-**Google Analytics**
-
-It can be enabled by specifying your analytics id under plainwhite in `_config.yml`
-
-```yaml
-plainwhite:
-  analytics_id: "< YOUR ID >"
-```
-
 **Sitemap**
 
 It can be toggled by the following line to under plainwhite in `_config.yml`
