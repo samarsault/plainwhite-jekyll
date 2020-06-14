@@ -148,6 +148,37 @@ plainwhite:
 
 Search is powered by [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search) Jekyll plugin. A `search.json` containing post meta and contents will be generated in site root folder. Plugin JavaScript will then match for posts based on user input. More info and `search.json` customization documentation can be found in plugin repository.
 
+**Latex**
+Latex typing can be enabled by adding the following line to `_config.yml`
+```yaml
+plainwhite: 
+  latex: true
+
+kramdown:
+  math_engine: mathjax
+```
+
+The library used to render any latex content is [MathJax](https://www.mathjax.org). Noticing that inline mode, display mode, as well as environment (Latex command in the form of `\begin{environment} ... \end{environment}`) are well supported.
+
+For inline equation, just put the desire latex equation between two dollar signs. For example,
+```latex
+$ y = x^2 $
+``` 
+
+For display mode, put the equation between the pair of two-dolar signs. For example,
+```latex
+$$ y = x^2 $$
+```
+
+For environment usage, please put the begin-end block inside of the pair of two dollar signs as in display mode. For example,
+```latex
+\begin{align*}
+  p(x) = \dfrac{1}{\sqrt{2\pi\sigma^2}}\exp\{-\dfrac{(x-\mu^2)}{2\sigma^2}\}
+\end{align*}
+```
+
+For more information on Latex syntax, please have a look on this [link](https://www.overleaf.com/learn/latex/Main_Page).
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/thelehhman/plainwhite-jekyll. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
