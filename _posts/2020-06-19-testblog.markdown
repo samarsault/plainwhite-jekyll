@@ -3,7 +3,7 @@ layout: post
 title:  "My second blog"
 date:   2020-06-19 21:03:36 +0530
 ---
-# Introduction
+
 Before you start need to come with a plan which where we must go and check. Before this the last thing was going randomly and checking different stuffs and it is messy and totally confused. Once you make plans or strategy, it will help in all ways. The easiest way is to map the things which have a big picture. It will help you to map out for Pentest, Bug bounty or any hacking activity. Let’s do it!!!
 
 # Recon
