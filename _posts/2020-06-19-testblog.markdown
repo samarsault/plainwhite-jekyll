@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "My second blog"
+title:  "Welcome to infosec"
 date:   2020-06-19 21:03:36 +0530
 ---
 
