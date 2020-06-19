@@ -36,7 +36,7 @@ For example, you have an application with WordPress CMS, next step will be wpsca
 # Abusing GitHub 
 This is probably one of my favourite workflows because it’s so easy to perform and it has a high chance of producing critical severity findings if done properly. Almost every developer uses GitHub to store their source code. Development, stage, production phrases are mostly deployed in GitHub. So that chances of getting secret keys such as API keys, AWS secret key can be identified, API Endpoints, domain patterns. Sometimes developers will upload hard coded credentials in their source code and config files for the world to see. These can be used to do all kinds of things.
 
-     < flow chart >
+<img height="65%" width="65%" src= "{{ "/assets/Flowchart2.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
   
 # Shodan
 Shodan is website that helps with passive recon and intelligence gathering. When we use passive, we are not actively touching the target which like to google hacking database specific for searches. Shodan is most popular resource for gathering port scan data. You can use this service free I would recommend to use paid which has no limitations. If you have your targets CIDR range, you can use that to query Shodan. This will display all assets in that CIDR range that have an open port. 
