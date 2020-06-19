@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "My way to Recon strategy"
-date:   2020-06-18 21:03:36 +0530
+date:   2020-06-19 21:03:36 +0530
 categories: Bugbounty Recon Hacking
 ---
 # Introduction
