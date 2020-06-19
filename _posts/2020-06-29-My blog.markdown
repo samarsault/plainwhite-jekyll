@@ -18,7 +18,7 @@ Why recon!!!
 # Traditional workflow 
 Traditional workflow for bug bounty looks like this. Here we can see first we are choosing the company, there are may reasons to choose a company some them are bounties, exposure, how they respond etc. 
 
-<img height="80%" width="80%" src= "{{ "/assets/Flowchart1.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
+<img height="65%" width="65%" src= "{{ "/assets/Flowchart1.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
 
 # Domain
 The first thing which you need to pick a company that has a bounty program. After getting root domain then you should go for the subdomain that belongs to root domain. Again, you can go for the traditional method. GitHub provides many tools to perform enumeration on subdomains. 
