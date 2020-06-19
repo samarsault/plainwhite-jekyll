@@ -13,8 +13,8 @@ sass:
   sass_dir: _sass
 plainwhite:
   name: Arun Nagath
-  tagline: Security Analyst
-  date_format: "%b %-d, %Y"
+  tagline: Security Enthusiast
+  date_format: "%d %-b, %Y"
   sitemap: true # set to true to generate sitemap.xml content
   search: true # set to true to enable searchbar
   dark_mode: true # set to true to add dark mode toggle
