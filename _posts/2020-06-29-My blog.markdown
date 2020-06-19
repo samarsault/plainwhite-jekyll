@@ -46,13 +46,13 @@ Shodan is website that helps with passive recon and intelligence gathering. When
 <img height="65%" width="65%" src= "{{ "/assets/shodan1.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
 
 
-org:"Organisation Name"<br>
+<b>org:"Organisation Name"<br></b>
 <img height="65%" width="65%" src= "{{ "/assets/shodan2.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
 
   
 These two queries will only return assets on your targets external network but what about companies that are hosted in the cloud. If your target has assets in the cloud such as AWS or Gcloud then it will be impossible to search via a CIDR range or the company’s name as they belong to someone else. One technique you can use is to search for a company's SSL certificate. SSL certificates should have the companies name in them so you can use this to find other assets belonging to an organization.
 
-ssl:"organisation Name"<br>
+<b>ssl:"organisation Name"<br></b>
 <img height="65%" width="65%" src= "{{ "/assets/shodan3.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
  
 As you can see, we found a bunch of assets that are using an SSL certificate from Starbucks. You can also see that there are 36 assets on AWS and 166 on Azure. This is interesting to note, you will learn in the exploitation phase that if we can find an SSRF vulnerability on an endpoint hosted on a cloud provider we can take over the company's entire cloud network.
