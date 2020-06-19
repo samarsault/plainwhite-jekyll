@@ -9,7 +9,7 @@ Before you start need to come with a plan which where we must go and check. Befo
 # Recon
 Recon is exploration of area to gain information of target. It does not have any unique method all has different aspects and different way art of gaining information. There is traditional workflow that will be common for everyone’s recon process. Some workflow may work, for others not. Hacking is combination of art and science.
 
-Why recon!!!
+# Why recon!!!
 
 * More attack surface
 * Bounties 😊
@@ -81,6 +81,4 @@ Until next time!!! :)
 
  
 
-   
   
-
