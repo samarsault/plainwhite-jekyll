@@ -42,11 +42,13 @@ This is probably one of my favourite workflows because it’s so easy to perform
 # Shodan
 Shodan is website that helps with passive recon and intelligence gathering. When we use passive, we are not actively touching the target which like to google hacking database specific for searches. Shodan is most popular resource for gathering port scan data. You can use this service free I would recommend to use paid which has no limitations. If you have your targets CIDR range, you can use that to query Shodan. This will display all assets in that CIDR range that have an open port. 
 
-<b>net:<CIDR,CIDR,CIDR></b>    
+<b>net:<CIDR,CIDR,CIDR>    
 <img height="65%" width="65%" src= "{{ "/assets/shodan1.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
+ </b>
 
-<b>org:<Organisation Name></b>
+<b>org:<Organisation Name>
 <img height="65%" width="65%" src= "{{ "/assets/shodan2.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
+ </b>
   
 These two queries will only return assets on your targets external network but what about companies that are hosted in the cloud. If your target has assets in the cloud such as AWS or Gcloud then it will be impossible to search via a CIDR range or the company’s name as they belong to someone else. One technique you can use is to search for a company's SSL certificate. SSL certificates should have the companies name in them so you can use this to find other assets belonging to an organization.
 
