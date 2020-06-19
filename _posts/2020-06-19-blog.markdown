@@ -1,0 +1,84 @@
+---
+layout: post
+title:  "My way to Recon strategy"
+date:   2020-06-19 21:03:36 +0530
+---
+# Introduction
+Before you start need to come with a plan which where we must go and check. Before this the last thing was going randomly and checking different stuffs and it is messy and totally confused. Once you make plans or strategy, it will help in all ways. The easiest way is to map the things which have a big picture. It will help you to map out for Pentest, Bug bounty or any hacking activity. Let’s do it!!!
+
+# Recon
+Recon is exploration of area to gain information of target. It does not have any unique method all has different aspects and different way art of gaining information. There is traditional workflow that will be common for everyone’s recon process. Some workflow may work, for others not. Hacking is combination of art and science.
+
+# Why recon!!!
+
+* More attack surface
+* Bounties 😊
+* To spend lot of time 
+
+# Traditional workflow 
+Traditional workflow for bug bounty looks like this. Here we can see first we are choosing the company, there are may reasons to choose a company some them are bounties, exposure, how they respond etc. 
+
+<img height="65%" width="65%" src= "{{ "/assets/Flowchart1.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
+
+
+# Domain
+The first thing which you need to pick a company that has a bounty program. After getting root domain then you should go for the subdomain that belongs to root domain. Again, you can go for the traditional method. GitHub provides many tools to perform enumeration on subdomains. 
+
+# CIDR 
+Depending upon the organisation Depending on the size of the organization they might have their own Classless Inter-Domain Routing (CIDR) range. If your confused in CIDR it is just range of IP address belonging to an organisation. Large companies have their own CIDR ranges but in small companies they have limitation, so they probably rent servers from the 3rd parties like amazon web services (AWS), Rack space etc. they don’t have the CIDR range.
+
+# IP
+Once you gathered list of IPs’ you need to perform port scan for each IP. Important data can be given by port scan such as protocols, services, open ports. You can identify the vulnerabilities on services used and version details so that very easy to learn about the vulnerability depending upon the environment they are found in. For example, getting SSRF hosted on AWS. You can perform port scan with 3rd parties. It is also a good idea to determine the geo location and autonomous system number (ASN) so you know where the IP is located, and which company owns it.
+
+# Web Applications
+The final step in this recon process is to take the list of subdomains and IPs running a web application and perform fingerprinting and content discovery on them. Identity the technology used in every endpoint. Technology will tell us lots story. From this able to identify the weakness of each end points the version disclosed from that identifying the CVE’s. Exploitation of the vulnerability.
+For example, you have an application with WordPress CMS, next step will be wpscan and identify the version and vulnerable plugins, enumeration of username and passwords. From the Version you will be able to identify the CVE’s. After fingerprinting the host next will be content discovery which helps you to find the pages hosted target. In traditional we can say crawling or performing the directory brute force on the site.
+
+# Abusing GitHub 
+This is probably one of my favourite workflows because it’s so easy to perform and it has a high chance of producing critical severity findings if done properly. Almost every developer uses GitHub to store their source code. Development, stage, production phrases are mostly deployed in GitHub. So that chances of getting secret keys such as API keys, AWS secret key can be identified, API Endpoints, domain patterns. Sometimes developers will upload hard coded credentials in their source code and config files for the world to see. These can be used to do all kinds of things.
+
+<img height="65%" width="65%" src= "{{ "/assets/Flowchart2.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
+
+  
+# Shodan
+Shodan is website that helps with passive recon and intelligence gathering. When we use passive, we are not actively touching the target which like to google hacking database specific for searches. Shodan is most popular resource for gathering port scan data. You can use this service free I would recommend to use paid which has no limitations. If you have your targets CIDR range, you can use that to query Shodan. This will display all assets in that CIDR range that have an open port. 
+
+
+<b>net:CIDR,CIDR,CIDR<br></b>
+<img height="65%" width="65%" src= "{{ "/assets/shodan1.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
+
+
+<b>org:"OrganisationName"<br></b>
+<img height="65%" width="65%" src= "{{ "/assets/shodan2.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
+
+
+These two queries will only return assets on your targets external network but what about companies that are hosted in the cloud. If your target has assets in the cloud such as AWS or Gcloud then it will be impossible to search via a CIDR range or the company’s name as they belong to someone else. One technique you can use is to search for a company's SSL certificate. SSL certificates should have the companies name in them so you can use this to find other assets belonging to an organization.
+
+<b>ssl:"organisationName"<br></b>
+<img height="65%" width="65%" src= "{{ "/assets/shodan3.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
+
+ 
+As you can see, we found a bunch of assets that are using an SSL certificate from Starbucks. You can also see that there are 36 assets on AWS and 166 on Azure. This is interesting to note, you will learn in the exploitation phase that if we can find an SSRF vulnerability on an endpoint hosted on a cloud provider we can take over the company's entire cloud network.
+ 
+# Wayback Machine
+Wayback machine is a site where you can view changes in web pages year by year based on records collected from the web. This allows you to see the pages and changes that existed at the end of each day It's usually used for human curiosity, but it's a slightly different tool for collecting information from a bug bounty perspective the important function we need to see is sitemap. It provides visualization of the crawling data on the site, and shows changes in the year. The more you go outside, the more detailed the page is. It depends on the service, but sometimes the old pages are alive because of compatibility or a person's mistake. Such pages are old and can be security-sensitive, making them a good prey from hunters.
+
+<img height="65%" width="65%" src= "{{ "/assets/waybackmachine.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
+ 
+# NMAP
+Everybody knows what Nmap as it’s one of the first tools any offensive security professional uses. Nmap does a really good job when scanning a small range of hosts but if you are trying to scan a large organization it’s probably not the right tool. My advice is if your scanning a small set of IPs use Nmap. If your planning to scan thousands, hundreds of thousands, or millions of IPs then you will need to use a tool that is built for mass scanning. Nmap is good at doing a thorough scan, so if you want to scan and enumerate every port on a machine use Nmap. The only time I use Nmap is when I’m scanning one single host for completeness.
+
+# Summary
+Reconnaissance, attackers will have enough information to proceed or cancel a cyber-attack. From an external reconnaissance, they will know the behavior of users and use it to an organization's disadvantage. The aim is only to find some form of weakness that attackers can then use to gain entry to the networks or systems of an organization. Internal reconnaissance, on the other hand, will enable attackers to learn more about the network in question. Some of the discussed tools are extremely powerful and give so much information that it could be thought of as being leaked by the network designers themselves. The attackers become knowledgeable about the vulnerabilities they can exploit within a network or system of an organization. At the end of this stage, attackers are then able to engage an organization on two fronts: either from the users' side or internally from the network's vulnerabilities.
+
+
+Best of luck for all of your future infosec things.
+
+If you have questions and anything about the post you want to ask me, Please contact me via twitter/fb. I’ll have my DM open.
+Feedbacks and edits are welcome
+
+Until next time!!! :)
+
+ 
+
+  
