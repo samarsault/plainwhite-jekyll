@@ -41,5 +41,5 @@ This is probably one of my favourite workflows because it’s so easy to perform
 # Shodan
 Shodan is website that helps with passive recon and intelligence gathering. When we use passive, we are not actively touching the target which like to google hacking database specific for searches. Shodan is most popular resource for gathering port scan data. You can use this service free I would recommend to use paid which has no limitations. If you have your targets CIDR range, you can use that to query Shodan. This will display all assets in that CIDR range that have an open port. 
 
-##### net: <CIDR,CIDR,CIDR>    
+<b>net:<CIDR,CIDR,CIDR></b>    
 
