@@ -20,7 +20,7 @@ Why recon!!!
 Traditional workflow for bug bounty looks like this. Here we can see first we are choosing the company, there are may reasons to choose a company some them are bounties, exposure, how they respond etc. 
 
 <img height="65%" width="65%" src= "{{ "/assets/Flowchart1.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
-<p style="text-align:center"> Figure 1: Traditional workflow </p>
+
 
 # Domain
 The first thing which you need to pick a company that has a bounty program. After getting root domain then you should go for the subdomain that belongs to root domain. Again, you can go for the traditional method. GitHub provides many tools to perform enumeration on subdomains. 
@@ -39,7 +39,7 @@ For example, you have an application with WordPress CMS, next step will be wpsca
 This is probably one of my favourite workflows because it’s so easy to perform and it has a high chance of producing critical severity findings if done properly. Almost every developer uses GitHub to store their source code. Development, stage, production phrases are mostly deployed in GitHub. So that chances of getting secret keys such as API keys, AWS secret key can be identified, API Endpoints, domain patterns. Sometimes developers will upload hard coded credentials in their source code and config files for the world to see. These can be used to do all kinds of things.
 
 <img height="65%" width="65%" src= "{{ "/assets/Flowchart2.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
-<p style="text-align:center"> Figure 2: GitHub workflow flowchart </p>
+
   
 # Shodan
 Shodan is website that helps with passive recon and intelligence gathering. When we use passive, we are not actively touching the target which like to google hacking database specific for searches. Shodan is most popular resource for gathering port scan data. You can use this service free I would recommend to use paid which has no limitations. If you have your targets CIDR range, you can use that to query Shodan. This will display all assets in that CIDR range that have an open port. 
@@ -47,21 +47,18 @@ Shodan is website that helps with passive recon and intelligence gathering. When
 
 <b>net:<CIDR,CIDR,CIDR><br></b>
 <img height="65%" width="65%" src= "{{ "/assets/shodan1.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
-<p style="text-align:center"> Figure 3: Shodan CIDR search </p>
 
 
 <b>org:"OrganisationName"<br></b>
 <img height="65%" width="65%" src= "{{ "/assets/shodan2.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
-<p style="text-align:center"> Figure 3: Shodan org search </p>
 
-  
+
 These two queries will only return assets on your targets external network but what about companies that are hosted in the cloud. If your target has assets in the cloud such as AWS or Gcloud then it will be impossible to search via a CIDR range or the company’s name as they belong to someone else. One technique you can use is to search for a company's SSL certificate. SSL certificates should have the companies name in them so you can use this to find other assets belonging to an organization.
 
 <b>ssl:"organisationName"<br></b>
 <img height="65%" width="65%" src= "{{ "/assets/shodan3.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
-<p style="text-align:center"> Figure 3: Shodan ssl search </p>
- 
 
+ 
 As you can see, we found a bunch of assets that are using an SSL certificate from Starbucks. You can also see that there are 36 assets on AWS and 166 on Azure. This is interesting to note, you will learn in the exploitation phase that if we can find an SSRF vulnerability on an endpoint hosted on a cloud provider we can take over the company's entire cloud network.
  
 # Wayback Machine
