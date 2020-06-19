@@ -45,6 +45,7 @@ Shodan is website that helps with passive recon and intelligence gathering. When
 net:<CIDR,CIDR,CIDR>    
 <img height="65%" width="65%" src= "{{ "/assets/shodan1.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
 
+
 org:<Organisation Name>
 <img height="65%" width="65%" src= "{{ "/assets/shodan2.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
 
