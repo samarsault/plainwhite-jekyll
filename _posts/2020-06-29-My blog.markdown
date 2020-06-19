@@ -17,5 +17,24 @@ Why recon!!!
 Traditional workflow 
 Traditional workflow for bug bounty looks like this. Here we can see first we are choosing the company, there are may reasons to choose a company some them are bounties, exposure, how they respond etc. 
 
+     < flow chat >
+     
+# Domain
+The first thing which you need to pick a company that has a bounty program. After getting root domain then you should go for the subdomain that belongs to root domain. Again, you can go for the traditional method. GitHub provides many tools to perform enumeration on subdomains. 
 
+# CIDR 
+Depending upon the organisation Depending on the size of the organization they might have their own Classless Inter-Domain Routing (CIDR) range. If your confused in CIDR it is just range of IP address belonging to an organisation. Large companies have their own CIDR ranges but in small companies they have limitation, so they probably rent servers from the 3rd parties like amazon web services (AWS), Rack space etc. they don’t have the CIDR range.
 
+# IP
+Once you gathered list of IPs’ you need to perform port scan for each IP. Important data can be given by port scan such as protocols, services, open ports. You can identify the vulnerabilities on services used and version details so that very easy to learn about the vulnerability depending upon the environment they are found in. For example, getting SSRF hosted on AWS. You can perform port scan with 3rd parties. It is also a good idea to determine the geo location and autonomous system number (ASN) so you know where the IP is located, and which company owns it.
+
+# Web Applications
+The final step in this recon process is to take the list of subdomains and IPs running a web application and perform fingerprinting and content discovery on them. Identity the technology used in every endpoint. Technology will tell us lots story. From this able to identify the weakness of each end points the version disclosed from that identifying the CVE’s. Exploitation of the vulnerability.
+For example, you have an application with WordPress CMS, next step will be wpscan and identify the version and vulnerable plugins, enumeration of username and passwords. From the Version you will be able to identify the CVE’s. After fingerprinting the host next will be content discovery which helps you to find the pages hosted target. In traditional we can say crawling or performing the directory brute force on the site.
+
+# Abusing GitHub 
+This is probably one of my favourite workflows because it’s so easy to perform and it has a high chance of producing critical severity findings if done properly. Almost every developer uses GitHub to store their source code. Development, stage, production phrases are mostly deployed in GitHub. So that chances of getting secret keys such as API keys, AWS secret key can be identified, API Endpoints, domain patterns. Sometimes developers will upload hard coded credentials in their source code and config files for the world to see. These can be used to do all kinds of things.
+
+  < flow chart >
+  
+  
