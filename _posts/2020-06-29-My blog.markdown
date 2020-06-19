@@ -43,12 +43,10 @@ Shodan is website that helps with passive recon and intelligence gathering. When
 
 <b> net:<CIDR,CIDR,CIDR> </b>    
 <img height="65%" width="65%" src= "{{ "/assets/shodan1.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
-
 <b> org:<Organisation name> </b>
 <img height="65%" width="65%" src= "{{ "/assets/shodan2.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
   
 These two queries will only return assets on your targets external network but what about companies that are hosted in the cloud. If your target has assets in the cloud such as AWS or Gcloud then it will be impossible to search via a CIDR range or the company’s name as they belong to someone else. One technique you can use is to search for a company's SSL certificate. SSL certificates should have the companies name in them so you can use this to find other assets belonging to an organization.
-
 <b> ssl:<Organisation Name> </b>
 <img height="50%" width="50%" src= "{{ "/assets/shodan3.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
  
