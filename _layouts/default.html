@@ -129,7 +129,17 @@
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', '{{ site.plainwhite.analytics_id }}');
-  </script>
+
+    enable_darkmode()
+
+    function enable_darkmode() {
+      console.log("enable_darmode called");
+      const DARK_CLASS = 'dark';
+      setCookie('theme', 'dark');
+      body.classList.add(DARK_CLASS);
+    }
+    
+    </script>
   {%- endif -%}
 
   {% if site.plainwhite.search %}
