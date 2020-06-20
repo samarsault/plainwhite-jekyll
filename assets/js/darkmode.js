@@ -8,7 +8,7 @@ function enable_darkmode(){
 
 function toggleDarkMode() {
     const DARK_CLASS = 'dark';
-    //alert("test adcvfdsnvj");
+    alert("test adcvfdsnvj");
     var body = document.querySelector("body");
     if (body.classList.contains(DARK_CLASS)) {
         setCookie('theme', 'light');
