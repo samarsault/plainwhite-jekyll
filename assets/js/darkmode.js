@@ -1,4 +1,4 @@
-function enable_darmode(){
+function enable_darkmode(){
     alert("test");
     console.log("enable_darmode called")
     const DARK_CLASS = 'dark';
