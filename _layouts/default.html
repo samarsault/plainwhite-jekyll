@@ -5,13 +5,8 @@
   {%- include head.html -%}
 </head>
 
-<body>
+<body onload="toggleDarkMode()">
 
-      <div>
-            <span onload="toggleDarkMode()"></span>
-      </div>
-      <script type="text/javascript" src="/assets/js/darkmode.js">toggleDarkMode();</script>
-  
   <main class="container">
     <section class="about">
       <a href="/"><img src="{{ "/assets/portfolio.png" | relative_url }}" alt="{{ site.plainwhite.name }}"></a>
