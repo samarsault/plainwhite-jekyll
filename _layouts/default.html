@@ -5,7 +5,7 @@
   {%- include head.html -%}
 </head>
 
-<body>
+<body class="dark">
   <main class="container">
     <section class="about">
       <a href="/"><img src="{{ "/assets/portfolio.png" | relative_url }}" alt="{{ site.plainwhite.name }}"></a>
@@ -105,7 +105,7 @@
       {%- endif -%}
       <p>&copy;
         {{ "now" | date: "%Y" }}</p>
-      {%- if site.plainwhite.dark_mode -%}
+      <!-- {%- if site.plainwhite.dark_mode -%}
       <div>
         <p>Dark Mode
           <i class="icon-moon"></i>
@@ -116,7 +116,7 @@
         </p>
       </div>
       <script type="text/javascript" src="/assets/js/darkmode.js"></script>
-      {%- endif -%}
+      {%- endif -%} -->
     </section>
     <section class="content">
       {{ content }}
