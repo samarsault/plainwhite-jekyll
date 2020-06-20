@@ -39,7 +39,7 @@ This is probably one of my favourite workflows because it’s so easy to perform
 
 <img height="65%" width="65%" src= "{{ "/assets/Flowchart2.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
 
-<h1><p style="color:black"> <a href="https://www.shodan.io/">Shodan</a></p></h1>
+<h1><a href="https://www.shodan.io/">Shodan</a></h1>
 Shodan is website that helps with passive recon and intelligence gathering. When we use passive, we are not actively touching the target which like to google hacking database specific for searches. Shodan is most popular resource for gathering port scan data. You can use this service free I would recommend to use paid which has no limitations. If you have your targets CIDR range, you can use that to query Shodan. This will display all assets in that CIDR range that have an open port. 
 
 
@@ -59,7 +59,7 @@ These two queries will only return assets on your targets external network but w
  
 As you can see, we found a bunch of assets that are using an SSL certificate from Starbucks. You can also see that there are 36 assets on AWS and 166 on Azure. This is interesting to note, you will learn in the exploitation phase that if we can find an SSRF vulnerability on an endpoint hosted on a cloud provider we can take over the company's entire cloud network.
  
-# Wayback Machine
+<h1><a href="https://archive.org/web/">WayBack Machine</a></h1>
 Wayback machine is a site where you can view changes in web pages year by year based on records collected from the web. This allows you to see the pages and changes that existed at the end of each day It's usually used for human curiosity, but it's a slightly different tool for collecting information from a bug bounty perspective the important function we need to see is sitemap. It provides visualization of the crawling data on the site, and shows changes in the year. The more you go outside, the more detailed the page is. It depends on the service, but sometimes the old pages are alive because of compatibility or a person's mistake. Such pages are old and can be security-sensitive, making them a good prey from hunters.
 
 <img height="65%" width="65%" src= "{{ "/assets/waybackmachine.png" | relative_url }}" alt="{{ site.plainwhite.name }}">
