@@ -1,14 +1,6 @@
-function enable_darkmode(){
-    alert("test");
-    console.log("enable_darmode called");
-    const DARK_CLASS = 'dark';
-    setCookie('theme', 'dark');
-     body.classList.add(DARK_CLASS);
-}
-
 function toggleDarkMode() {
     const DARK_CLASS = 'dark';
-    alert("test adcvfdsnvj");
+
     var body = document.querySelector("body");
     if (body.classList.contains(DARK_CLASS)) {
         setCookie('theme', 'light');
