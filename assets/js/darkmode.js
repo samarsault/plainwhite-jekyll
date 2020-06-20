@@ -1,3 +1,14 @@
+enable_darkmode()
+
+function enable_darkmode(){
+    console.log("enable_darmode called");
+    const DARK_CLASS = 'dark';
+    setCookie('theme', 'dark');
+    body.classList.add(DARK_CLASS);
+}
+
+
+
 function toggleDarkMode() {
     const DARK_CLASS = 'dark';
 
