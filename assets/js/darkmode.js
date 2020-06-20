@@ -1,5 +1,6 @@
 function enable_darmode(){
     alert("test");
+    console.log("enable_darmode called")
     const DARK_CLASS = 'dark';
     setCookie('theme', 'dark');
      body.classList.add(DARK_CLASS);
