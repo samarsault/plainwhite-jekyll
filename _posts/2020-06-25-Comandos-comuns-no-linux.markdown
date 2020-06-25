@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Comandos comuns no linux"
+date:   2020-06-25 21:03:36
 categories: Bash
 ---
 Existem muitas distribuições linux no mundo com várias formas de se lidar com elas, porem, pelo simples fato de terem o mesmo kernel tem muitos comandos iguais, dentre estão estes
