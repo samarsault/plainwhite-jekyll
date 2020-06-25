@@ -5,11 +5,11 @@ categories: Bash
 ---
 Existem muitas distribuições linux no mundo com várias formas de se lidar com elas, porem, pelo simples fato de terem o mesmo kernel tem muitos comandos iguais, dentre estão estes:
 **pwd** - Este comando serve para que você saiba em qual diretório está
-Exemplos: 
-{% highlight bash %}
+Exemplos:
+```bash
 $ pwd
 /home/usuario/Documentos/
-{% endhighlight %}
+```
 **ls** - Este comando serve para listar os arquivos e diretórios
 Exemplos:
 {% highlight bash %}
