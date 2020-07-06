@@ -8,9 +8,9 @@
 <body>
   <main class="container">
     <section class="about">
-      <a href="/"><img src="{{ "/assets/portfolio.png" | relative_url }}" alt="{{ site.plainwhite.name }}"></a>
+      <a href="{{ "/" | relative_url}}"><img src="{{ "/assets/portfolio.png" | relative_url }}" alt="{{ site.plainwhite.name }}"></a>
       <h2 id="title">
-        <a href="/">{{ site.plainwhite.name }}</a>
+        <a href="{{ "/" | relative_url }}">{{ site.plainwhite.name }}</a>
       </h2>
       <p class="tagline">{{ site.plainwhite.tagline }}</p>
       <ul class="social">
@@ -115,7 +115,7 @@
           </label>
         </p>
       </div>
-      <script type="text/javascript" src="/assets/js/darkmode.js"></script>
+      <script type="text/javascript" src="{{ "/assets/js/darkmode.js" | relative_url }}"></script>
       {%- endif -%}
     </section>
     <section class="content">
@@ -133,8 +133,49 @@
   {%- endif -%}
 
   {% if site.plainwhite.search %}
-  <script src="/assets/js/simple-jekyll-search.min.js"></script>
-  <script src="/assets/js/search.js"></script>
+  <script src="{{ "/assets/js/simple-jekyll-search.min.js" | relative_url }}"></script>
+  <!-- <script src="{{ "/assets/js/search.js" | relative_url }}"></script> -->
+  <script>
+	window.onload = function () {
+		var sjs = SimpleJekyllSearch({
+			searchInput: document.getElementById('searchbar'),
+			resultsContainer: document.getElementById('search-results'),
+			json: '{{ "search.json" | relative_url }}',
+			searchResultTemplate: '<a href="{url}" target="_blank">{title}</a>',
+			noResultsText: ''
+		});
+
+		/* hack ios safari unfocus */
+		if (/Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent))
+			document.body.firstElementChild.tabIndex = 1;
+
+		var $labelGroup = document.querySelector(".posts-labelgroup");
+		var $searchbar = document.getElementById("searchbar");
+		var $postLabel = document.getElementById("posts-label");
+		var $searchResults = document.querySelector(".search-results");
+		var labelWidth = $postLabel.scrollWidth;
+		$postLabel.style.width = labelWidth + "px";
+
+		$labelGroup.addEventListener("click", function (e) {
+			$searchResults.style.display = null;
+			$postLabel.style.width = "0";
+			$labelGroup.setAttribute("class", "posts-labelgroup focus-within");
+			$searchbar.focus();
+			e.stopPropagation();
+		}, false);
+
+		$labelGroup.addEventListener("mouseleave", function () {
+			document.body.onclick = searchCollapse;
+		});
+
+		var searchCollapse = function (e) {
+			$searchResults.style.display = "none";
+			$labelGroup.setAttribute("class", "posts-labelgroup");
+			$postLabel.style.width = labelWidth + "px";
+			document.body.onclick = null;
+		};
+	}
+  </script>
   {% endif %}
 </body>
 

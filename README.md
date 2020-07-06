@@ -148,6 +148,14 @@ plainwhite:
 
 Search is powered by [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search) Jekyll plugin. A `search.json` containing post meta and contents will be generated in site root folder. Plugin JavaScript will then match for posts based on user input. More info and `search.json` customization documentation can be found in plugin repository.
 
+**Base URL**
+
+You can specify a custom base URL (eg. example.com/blog/) by adding the following line to config.yaml. Note that there is no trailing slash on the URL.
+
+```yaml
+baseurl: "/blog"
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/thelehhman/plainwhite-jekyll. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
