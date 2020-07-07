@@ -54,7 +54,12 @@ plainwhite:
 
 **Updating Placeholder Image**
 
-The placeholder portfolio image can be replaced by the desired image by placing it as `assets/portfolio.png` in your jekyll website.
+The placeholder portfolio image can be replaced by the desired image by placing it as `assets/portfolio.png` in your jekyll website, or by changing the following line in `_config.yaml`
+
+```yaml
+plainwhite:
+  portfolio_image: "portfolio.png" # the filename of the image in /assets/ to display
+```
 
 **Comments (Disqus)**
 
