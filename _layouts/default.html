@@ -8,9 +8,9 @@
 <body>
   <main class="container">
     <section class="about">
-      <a href="/"><img src="{{ "/assets/portfolio.png" | relative_url }}" alt="{{ site.plainwhite.name }}"></a>
+      <a href="{{ "/" | relative_url}}"><img src="{{ "/assets/portfolio.png" | relative_url }}" alt="{{ site.plainwhite.name }}"></a>
       <h2 id="title">
-        <a href="/">{{ site.plainwhite.name }}</a>
+        <a href="{{ "/" | relative_url }}">{{ site.plainwhite.name }}</a>
       </h2>
       <p class="tagline">{{ site.plainwhite.tagline }}</p>
       <ul class="social">
@@ -115,7 +115,7 @@
           </label>
         </p>
       </div>
-      <script type="text/javascript" src="/assets/js/darkmode.js"></script>
+      <script type="text/javascript" src="{{ "/assets/js/darkmode.js" | relative_url }}"></script>
       {%- endif -%}
     </section>
     <section class="content">
@@ -133,8 +133,8 @@
   {%- endif -%}
 
   {% if site.plainwhite.search %}
-  <script src="/assets/js/simple-jekyll-search.min.js"></script>
-  <script src="/assets/js/search.js"></script>
+  <script src="{{ "/assets/js/simple-jekyll-search.min.js" | relative_url }}"></script>
+  <script src="{{ "/assets/js/search.js" | relative_url }}"></script>
   {% endif %}
 </body>
 
