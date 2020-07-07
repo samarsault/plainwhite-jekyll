@@ -18,6 +18,7 @@ plainwhite:
   sitemap: true # set to true to generate sitemap.xml content
   search: true # set to true to enable searchbar
   dark_mode: true # set to true to add dark mode toggle
+  portfolio_image: "portfolio.png" # the filename of the image in /assets/ to display
 
   # generate social links in footer
   social_links:
