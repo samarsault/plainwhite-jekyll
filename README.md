@@ -156,6 +156,17 @@ You can specify a custom base URL (eg. example.com/blog/) by adding the followin
 baseurl: "/blog"
 ```
 
+**Language**
+
+You can set the `lang` attribute of the `<html>` tag on your pages by changing the following line in `_config.yml`:
+
+```yaml
+plainwhite:
+  html_lang: "en"
+```
+
+[See here for a full list of available language codes](https://www.w3schools.com/tags/ref_country_codes.asp)
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/thelehhman/plainwhite-jekyll. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
