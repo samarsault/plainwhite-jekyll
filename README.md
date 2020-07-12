@@ -58,7 +58,7 @@ The placeholder portfolio image can be replaced by the desired image by placing 
 
 ```yaml
 plainwhite:
-  portfolio_image: "portfolio.png" # the filename of the image in /assets/ to display
+  portfolio_image:  "assets/portfolio.png" # the path from the base directory of the site to the image to display (no / at the start)
 ```
 
 **Comments (Disqus)**
