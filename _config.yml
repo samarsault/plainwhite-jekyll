@@ -25,14 +25,15 @@ plainwhite:
     github:  thelehhman
     linkedIn: in/thelehhman
     rss: rss
-    # dribbble: jekyll
-    # flickr:   jekyll
-    # instagram: jekyll
-    # pinterest: jekyll
-    # youtube: jekyll
-    # facebook: jekyll
-    # soundcloud: jekyll
-    # telegram: jekyll
+    dribbble: jekyll
+    flickr:   jekyll
+    instagram: jekyll
+    pinterest: jekyll
+    youtube: jekyll
+    facebook: jekyll
+    soundcloud: jekyll
+    telegram: jekyll
+    gitlab: jekyll
 
     # Mastodon instances
     # mastodon:
