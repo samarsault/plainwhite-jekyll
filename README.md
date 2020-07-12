@@ -11,7 +11,7 @@ Simplistic jekyll portfolio-style theme for writers.
 Add this line to your site's `_config.yml`:
 
 ```yaml
-remote_theme: thelehhman/plainwhite-jekyll
+remote_theme: samarsault/plainwhite-jekyll
 ```
 
 ## Installation
@@ -47,9 +47,9 @@ plainwhite:
   date_format: "%b %-d, %Y"
 
   social_links:
-    twitter: thelehhman
-    github: thelehhman
-    linkedIn: in/thelehhman # format: locale/username
+    twitter: samarsault
+    github: samarsault
+    linkedIn: in/samarsault # format: locale/username
 ```
 
 **Updating Placeholder Image**
@@ -169,7 +169,7 @@ plainwhite:
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/thelehhman/plainwhite-jekyll. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/samarsault/plainwhite-jekyll. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 
@@ -191,4 +191,4 @@ The theme is available as open source under the terms of the [MIT License](https
 
 ## More themes
 
-- [Texture](https://github.com/thelehhman/texture)
+- [Texture](https://github.com/samarsault/texture)
