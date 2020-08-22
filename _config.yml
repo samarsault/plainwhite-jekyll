@@ -23,9 +23,9 @@ plainwhite:
 
   # generate social links in footer
   social_links:
-    twitter: samarsault
-    github:  samarsault
-    linkedIn: in/samarsault
+    twitter: ljhsoft
+    github:  ljhsoft
+    linkedIn: in/ljhsoft
     #rss: rss
     #dribbble: jekyll
     #flickr:   jekyll
@@ -47,7 +47,7 @@ plainwhite:
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
 #header_pages:
-# - about.md
+ - about.md
 
 # Build settings
 theme: plainwhite
