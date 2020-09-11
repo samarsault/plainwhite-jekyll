@@ -5,6 +5,8 @@
   {%- include head.html -%}
 </head>
 
+{% assign condensed_class = "condensed" %}
+
 <body>
   <main class="container">
     <section class="about">
@@ -19,8 +21,12 @@
       <h2 id="title">
         <a href="{{ "/" | relative_url }}">{{ site.plainwhite.name }}</a>
       </h2>
+      {%- if site.plainwhite.tagline -%}
       <p class="tagline">{{ site.plainwhite.tagline }}</p>
-      <ul class="social">
+      {%- endif -%}
+      {% capture footer %}
+      {%- if site.plainwhite.social_links != '' -%}
+      <ul class="social about-footer {{condensed_class}}">
         {%- if site.plainwhite.social_links.github -%}
         <a href="https://github.com/{{ site.plainwhite.social_links.github }}" target="_blank">
           <li>
@@ -28,7 +34,7 @@
           </li>
         </a>
         {%- endif -%}
-		{%- if site.plainwhite.social_links.gitlab -%}
+        {%- if site.plainwhite.social_links.gitlab -%}
         <a href="https://gitlab.com/{{ site.plainwhite.social_links.gitlab }}" target="_blank">
           <li>
             <i class="icon-gitlab"></i>
@@ -106,8 +112,9 @@
         </a>
         {%- endif -%}
       </ul>
+      {%- endif -%}
       {%- if site.plainwhite.navigation -%}
-      <nav class="navigation">
+      <nav class="navigation about-footer {{condensed_class}}">
         <ul>
           {% for link in site.plainwhite.navigation %}
           <li>
@@ -117,25 +124,33 @@
         </ul>
       </nav>
       {%- endif -%}
-      <p>&copy;
+      <p class="about-footer {{condensed_class}}">&copy;
         {{ "now" | date: "%Y" }}</p>
       {%- if site.plainwhite.dark_mode -%}
-      <div>
+      <div class="about-footer {{condensed_class}}">
         <p>Dark Mode
           <i class="icon-moon"></i>
           <label class="switch">
-            <input type="checkbox" id="dark-mode-toggle">
+            <input type="checkbox" class="dark-mode-toggle">
             <span class="slider round" onclick="toggleDarkMode()"></span>
           </label>
         </p>
       </div>
-      <script type="text/javascript" src="{{ "/assets/js/darkmode.js" | relative_url }}"></script>
       {%- endif -%}
+      {% endcapture %}
+      {{ footer }}
     </section>
     <section class="content">
       {{ content }}
     </section>
+    <footer class="{{condensed_class}}">
+      {{ footer }}
+    </footer>
   </main>
+  {% if site.plainwhite.dark_mode %}
+  <script type="text/javascript" src="{{ "/assets/js/darkmode.js" | relative_url }}"></script>
+  {% endif %}
+
   {%- if site.plainwhite.analytics_id -%}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.plainwhite.analytics_id }}"></script>
   <script>
