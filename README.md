@@ -61,6 +61,14 @@ plainwhite:
   portfolio_image:  "assets/portfolio.png" # the path from the base directory of the site to the image to display (no / at the start)
 ```
 
+To use a different image for dark mode, e.g. with different colors that work better in dark mode, add a `portfolio_image_dark` entry in addition to the `portfolio_image`.
+
+```yaml
+plainwhite:
+  portfolio_image:      "assets/portfolio.png"
+  portfolio_image_dark: "assets/portfolio_dark.png"
+```
+
 **Comments (Disqus)**
 
 Comments on posts can be enabled by specifying your disqus_shortname under plainwhite in `_config.yml`. For example,

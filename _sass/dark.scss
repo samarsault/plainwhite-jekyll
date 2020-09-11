@@ -6,6 +6,15 @@
 	color: $dark_text_color;
 	border-color: #e6e6e6;
 	
+	.about{
+		img.light {
+			display: none;
+		}
+		img.dark {
+			display: inline;
+		}
+	}
+
 	.social [class^="icon-"] {
 		color: $dark_text_color 
 	}
