@@ -10,6 +10,8 @@
 <body>
   <main class="container">
     <section class="about">
+      <div class="about-header {{condensed_class}}">
+      <div class="about-title">
       <a href="{{ "/" | relative_url}}">
         {% if site.plainwhite.portfolio_image_dark and site.plainwhite.dark_mode %}
         <img class="light" src="{{site.baseurl }}/{{ site.plainwhite.portfolio_image }}" alt="{{ site.plainwhite.name }}" />
@@ -21,9 +23,11 @@
       <h2 id="title">
         <a href="{{ "/" | relative_url }}">{{ site.plainwhite.name }}</a>
       </h2>
+      </div>
       {%- if site.plainwhite.tagline -%}
       <p class="tagline">{{ site.plainwhite.tagline }}</p>
       {%- endif -%}
+      </div>
       {% capture footer %}
       {%- if site.plainwhite.social_links != '' -%}
       <ul class="social about-footer {{condensed_class}}">

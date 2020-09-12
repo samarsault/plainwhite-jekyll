@@ -40,6 +40,9 @@ a {
 
 h2 {
   margin: 0.7em 0;
+  @media screen and (max-width: $mobileW) {
+    margin: 0.3em 0;
+  }
 }
 main {
   margin: 0 90px;
@@ -78,7 +81,10 @@ main {
     padding-bottom: 15vh;
     @media screen and (max-width: $mobileW) {
       height: auto;
-      padding: 10vh 0;
+      padding: 5vh 30px;
+    }
+    @media screen and (max-width: $smallMobileW) {
+      padding: 5vh 20px;
     }
     @media screen and (min-width: $mobileW + 1) {
       position: fixed;
@@ -98,7 +104,7 @@ main {
     .tagline {
       text-align: center;
       font-size: 22px;
-      margin-top: 17px;
+      margin-top: 0px;
       color: #aaa;
       white-space: pre-wrap;
       line-height: normal;
@@ -108,6 +114,16 @@ main {
     }
     img.dark {
       display: none;
+    }
+    .about-header {
+      display: flex;
+      flex-direction: column;
+      .about-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 17px;
+      }
     }
   }
 }
@@ -213,7 +229,7 @@ main {
 .posts,
 .post-container {
   list-style-type: none;
-  margin: 45px 30px;
+  margin: 0px 30px;
   @media screen and (max-width: $smallMobileW) {
     margin-left: 20px;
     margin-right: 20px;
@@ -285,6 +301,24 @@ footer {
 }
 @media screen and (max-width: $mobileW) {
   .about {
+    .about-header.condensed {
+      align-items: start;
+      align-self: start;
+      .about-title {
+        flex-direction: row;
+        margin-bottom: 10px;
+        img {
+          max-height: 40px;
+        }
+        h2 {
+          margin: 0 10px;
+        }
+      }
+      .tagline {
+        font-size: 18px;
+        margin-bottom: 0px;
+      }
+    }
     .about-footer.condensed {
       display: none;
     }
