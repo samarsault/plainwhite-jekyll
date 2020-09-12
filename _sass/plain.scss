@@ -106,6 +106,9 @@ main {
     img {
       max-width: 150px;
     }
+    img.dark {
+      display: none;
+    }
   }
 }
 #title {
