@@ -2,7 +2,7 @@ title: "[zifter] tech blog"
 author: zifter
 email: zifter.ai@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
-  "c++/python game developer from Minsk"
+  "C++/Go/Python/Game Developer from Minsk"
 show_excerpts: true # set to true to show excerpts on the homepage
 
 # Minima date format
@@ -11,7 +11,7 @@ sass:
   sass_dir: _sass
 plainwhite:
   name: Oleg Strokachuk
-  tagline: C++ Game Developer
+  tagline: C++/Go/Python<br/>Game Developer
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
   analytics_id: "UA-146773299-1"
@@ -20,7 +20,7 @@ plainwhite:
   # generate social links in footer
   social_links:
     twitter: zifter_ai
-    github:  zifter
+    github: zifter
     rss: rss
     linkedin: in/oleg-strokachuk-67061543/
     telegram: zifter_coder
