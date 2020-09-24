@@ -3,8 +3,17 @@
 
 @import "plain";
 
+{% if site.plainwhite.search %}
+  @import "search";
+{% endif %}
+
+{%- if site.plainwhite.dark_mode -%}
+  @import "toggle";
+  @import "dark";
+{%- endif -%}
+
 .avatar {
-border-radius: 50%;
--moz-border-radius: 50%;
--webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
 }

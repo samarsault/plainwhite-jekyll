@@ -1,36 +1,155 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	{%- include head.html -%}
-</head>
-<body>
-	<main class="container">
-		<section class="about">
-			<a href="{{ site.BASE_PATH }}/">
-				<img src="//www.gravatar.com/avatar/eff8ba66f23aa239e74ed78295be780b?s=150" alt="{{ site.plainwhite.name }}" class="avatar">
-			</a>
-			<h2>{{ site.plainwhite.name }}</h2>
-			<p class="tagline">{{ site.plainwhite.tagline }}</p>
-			<ul class="social">
-				<a href="https://github.com/{{ site.plainwhite.social_links.github }}"><li><i class="icon-github-circled"></i></li></a>
-				<a href="https://www.linkedin.com/{{ site.plainwhite.social_links.linkedin }}"><li><i class="icon-linkedin-squared"></i></li></a>
-				<a href="https://t.me/{{ site.plainwhite.social_links.telegram }}"><li><i class="icon-telegram-squared"></i></li></a>
-			</ul>
-			<p>&copy; {{ "now" | date: "%Y" }}</p>
-		</section>
-		<section class="content">
-			{{ content }}
-		</section>
-	</main>
-	{%- if site.plainwhite.analytics_id -%}
-	<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.plainwhite.analytics_id }}"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+<html lang="{{ site.plainwhite.html_lang }}">
 
-		gtag('config', '{{ site.plainwhite.analytics_id }}');
-	</script>
-	{%- endif -%}
+<head>
+  {%- include head.html -%}
+</head>
+
+<body>
+  <main class="container">
+    <section class="about">
+      <a href="{{ "/" | relative_url}}">
+        {% if site.plainwhite.portfolio_image_dark and site.plainwhite.dark_mode %}
+        <img class="light" src="{{site.baseurl }}/{{ site.plainwhite.portfolio_image }}" alt="{{ site.plainwhite.name }}" class="avatar"/>
+        <img class="dark" src="{{site.baseurl }}/{{ site.plainwhite.portfolio_image_dark }}" alt="{{ site.plainwhite.name }}" class="avatar"/>
+        {% else %}
+        <img src="{{site.baseurl }}/{{ site.plainwhite.portfolio_image }}" alt="{{ site.plainwhite.name }}" class="avatar"/>
+        {% endif %}
+      </a>
+      <h2 id="title">
+        <a href="{{ "/" | relative_url }}">{{ site.plainwhite.name }}</a>
+      </h2>
+      <p class="tagline">{{ site.plainwhite.tagline }}</p>
+      <ul class="social">
+        {%- if site.plainwhite.social_links.github -%}
+        <a href="https://github.com/{{ site.plainwhite.social_links.github }}" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a>
+        {%- endif -%}
+		{%- if site.plainwhite.social_links.gitlab -%}
+        <a href="https://gitlab.com/{{ site.plainwhite.social_links.gitlab }}" target="_blank">
+          <li>
+            <i class="icon-gitlab"></i>
+          </li>
+        </a>
+        {%- endif -%}
+        {%- if site.plainwhite.social_links.linkedIn -%}
+        <a href="https://www.linkedin.com/{{ site.plainwhite.social_links.linkedIn }}" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a>
+        {%- endif -%}
+        {%- if site.plainwhite.social_links.twitter -%}
+        <a href="https://twitter.com/{{ site.plainwhite.social_links.twitter }}" target="_blank">
+          <li>
+            <i class="icon-twitter-squared"></i>
+          </li>
+        </a>
+        {%- endif -%}
+        {%- if site.plainwhite.social_links.instagram -%}
+        <a href="https://instagram.com/{{ site.plainwhite.social_links.instagram }}" target="_blank">
+          <li>
+            <i class="icon-instagram"></i>
+          </li>
+        </a>
+        {%- endif -%}
+        {%- if site.plainwhite.social_links.facebook -%}
+        <a href="https://facebook.com/{{ site.plainwhite.social_links.facebook }}" target="_blank">
+          <li>
+            <i class="icon-facebook-squared"></i>
+          </li>
+        </a>
+        {%- endif -%}
+        {%- if site.plainwhite.social_links.youtube -%}
+        <a href="https://youtube.com/{{ site.plainwhite.social_links.youtube }}" target="_blank">
+          <li>
+            <i class="icon-youtube"></i>
+          </li>
+        </a>
+        {%- endif -%}
+        {%- if site.plainwhite.social_links.pinterest -%}
+        <a href="https://pinterest.com/{{ site.plainwhite.social_links.pinterest }}" target="_blank">
+          <li>
+            <i class="icon-pinterest-squared"></i>
+          </li>
+        </a>
+        {%- endif -%}
+        {%- if site.plainwhite.social_links.dribbble -%}
+        <a href="https://dribbble.com/{{ site.plainwhite.social_links.dribbble }}" target="_blank">
+          <li>
+            <i class="icon-dribbble"></i>
+          </li>
+        </a>
+        {%- endif -%}
+        {%- if site.plainwhite.social_links.flickr -%}
+        <a href="https://flickr.com/{{ site.plainwhite.social_links.flickr }}" target="_blank">
+          <li>
+            <i class="icon-flickr"></i>
+          </li>
+        </a>
+        {%- endif -%}
+        {%- if site.plainwhite.social_links.telegram -%}
+        <a href=" https://t.me/{{ site.plainwhite.social_links.telegram }}" target="_blank">
+          <li>
+            <i class="icon-telegram"></i>
+          </li>
+        </a>
+        {%- endif -%}
+        {%- if site.plainwhite.social_links.soundcloud -%}
+        <a href=" https://soundcloud.com/{{ site.plainwhite.social_links.soundcloud }}" target="_blank">
+          <li>
+            <i class="icon-soundcloud"></i>
+          </li>
+        </a>
+        {%- endif -%}
+      </ul>
+      {%- if site.plainwhite.navigation -%}
+      <nav class="navigation">
+        <ul>
+          {% for link in site.plainwhite.navigation %}
+          <li>
+            <a href="{{ link.url }}">{{ link.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      {%- endif -%}
+      <p>&copy;
+        {{ "now" | date: "%Y" }}</p>
+      {%- if site.plainwhite.dark_mode -%}
+      <div>
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" id="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+      <script type="text/javascript" src="{{ "/assets/js/darkmode.js" | relative_url }}"></script>
+      {%- endif -%}
+    </section>
+    <section class="content">
+      {{ content }}
+    </section>
+  </main>
+  {%- if site.plainwhite.analytics_id -%}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.plainwhite.analytics_id }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', '{{ site.plainwhite.analytics_id }}');
+  </script>
+  {%- endif -%}
+
+  {% if site.plainwhite.search %}
+  <script src="{{ "/assets/js/simple-jekyll-search.min.js" | relative_url }}"></script>
+  <script src="{{ "/assets/js/search.js" | relative_url }}"></script>
+  {% endif %}
 </body>
+
 </html>

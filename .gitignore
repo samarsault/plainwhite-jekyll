@@ -7,3 +7,5 @@ _site/*
 Gemfile.lock
 .idea
 .jekyll-cache
+vendor
+tags
