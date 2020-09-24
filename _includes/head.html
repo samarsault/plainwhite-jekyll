@@ -5,3 +5,6 @@
 <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
 <title>{{ page.title | default: site.title }}</title>
 {% seo %}
+{% if site.plainwhite.dark_mode %}
+<script type="text/javascript" src="{{ "/assets/js/darkmode.js" | relative_url }}"></script>
+{% endif %}
