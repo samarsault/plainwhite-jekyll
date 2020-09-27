@@ -126,7 +126,7 @@
         <ul>
           {% for link in site.plainwhite.navigation %}
           <li>
-            <a href="{{ link.url }}">{{ link.title }}</a>
+            <a href="{{ link.url }}" {% unless forloop.first %}class="divider"{% endunless %}>{{ link.title }}</a>
           </li>
           {% endfor %}
         </ul>
@@ -151,7 +151,7 @@
     <section class="content">
       {{ content }}
     </section>
-    <footer class="{{condensed_class}}">
+    <footer class="{{condensed_class}} divider">
       {{ footer }}
     </footer>
   </main>
