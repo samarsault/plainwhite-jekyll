@@ -139,8 +139,8 @@
         <p>Dark Mode
           <i class="icon-moon"></i>
           <label class="switch">
-            <input type="checkbox" class="dark-mode-toggle">
-            <span class="slider round" onclick="toggleDarkMode()"></span>
+            <span class="dark-mode-toggle"></span>
+            <span class="slider round" onclick="toggleDarkMode()" onkeydown="toggleDarkModeKey(event)" tabIndex=0></span>
           </label>
         </p>
       </div>
@@ -155,9 +155,6 @@
       {{ footer }}
     </footer>
   </main>
-  {% if site.plainwhite.dark_mode %}
-  <script type="text/javascript" src="{{ "/assets/js/darkmode.js" | relative_url }}"></script>
-  {% endif %}
 
   {%- if site.plainwhite.analytics_id -%}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.plainwhite.analytics_id }}"></script>

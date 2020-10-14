@@ -32,7 +32,6 @@ video {
 
 a {
   color: #000;
-  transition: color 0.3s;
   &:hover {
     color: $linkColor;
   }
@@ -103,9 +102,9 @@ main {
     }
     .tagline {
       text-align: center;
-      font-size: 22px;
+      font-size: 18px;
       margin-top: 0px;
-      color: #aaa;
+      color: #6e6e6e;
       white-space: pre-wrap;
       line-height: normal;
     }
@@ -315,7 +314,6 @@ footer {
         }
       }
       .tagline {
-        font-size: 18px;
         margin-bottom: 0px;
       }
     }

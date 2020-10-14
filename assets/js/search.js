@@ -16,28 +16,33 @@ window.onload = function () {
 
     var $labelGroup = document.querySelector(".posts-labelgroup");
     var $searchbar = document.getElementById("searchbar");
+    var $searchContainer = document.querySelector(".search-container");
     var $postLabel = document.getElementById("posts-label");
     var $searchResults = document.querySelector(".search-results");
     var labelWidth = $postLabel.scrollWidth;
     $postLabel.style.width = labelWidth + "px";
 
-    $labelGroup.addEventListener("click", function (e) {
-        $searchResults.style.display = null;
-        $postLabel.style.width = "0";
-        $labelGroup.setAttribute("class", "posts-labelgroup focus-within");
-        $searchbar.focus();
+    // $searchbar.addEventListener("click", searchFocus, false);
+    $searchContainer.addEventListener("focusin", searchFocus, false);
+    document.body.addEventListener("focusin", searchCollapse, false);
+
+    var searchHasFocus = false;
+
+    function searchFocus(e) {
+        if (!searchHasFocus) {
+            $searchResults.style.display = null;
+            $postLabel.style.width = "0";
+            $labelGroup.setAttribute("class", "posts-labelgroup focus-within");
+            $searchbar.focus();
+            searchHasFocus = true;
+        }
         e.stopPropagation();
-    }, false);
+    }
 
-    $labelGroup.addEventListener("mouseleave", function () {
-        document.body.onclick = searchCollapse;
-    });
-
-    var searchCollapse = function (e) {
+    function searchCollapse(e) {
         $searchResults.style.display = "none";
         $labelGroup.setAttribute("class", "posts-labelgroup");
         $postLabel.style.width = labelWidth + "px";
-        document.body.onclick = null;
-    };
+        searchHasFocus = false;
+    }
 }
-

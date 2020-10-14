@@ -10,6 +10,7 @@ layout: default
 
 {%- if site.posts.size > 0 -%}
   <ul class="posts">
+    <label for="searchbar">
     <li class="posts-labelgroup" id="posts-labelgroup">
       <h1 id="posts-label">posts</h1>
       {% if site.plainwhite.search %}
@@ -22,6 +23,7 @@ layout: default
       </div>
       {% endif %}
     </li>
+    </label>
 
     {%- for post in site.posts -%}
       <li>
