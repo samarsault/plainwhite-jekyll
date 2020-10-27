@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Почему перестало компилироваться? Особенности dllexport
+title: Идеальный pypi package с поддержкой разных версий питона
 categories: [programming]
 tags: [C++, visual studio, dll]
 comments: true
 ---
 
-https://bugs.python.org/issue22587
-
-"Идеальный" pypi package с поддержкой разных версий питона
+Основная статья на хабре: [https://habr.com/ru/post/483512/](Разработка идеального pypi пакета с поддержкой разных версий python)
+Далее - черновик
 
 Очень давно хотел создать полезный open-source пакет для питона, который каждый желающий сможет установить заветной командой:
 ```
