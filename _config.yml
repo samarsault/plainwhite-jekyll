@@ -39,6 +39,7 @@ plainwhite:
     #soundcloud: jekyll
     #telegram: jekyll
     #gitlab: jekyll
+    #email: jekyll
 
     # Mastodon instances
     # mastodon:

@@ -119,6 +119,13 @@
           </li>
         </a>
         {%- endif -%}
+        {%- if site.plainwhite.social_links.email -%}
+        <a href="mailto:{{ site.plainwhite.social_links.email }}" target="_blank">
+          <li>
+            <i class="icon-mail-alt"></i>
+          </li>
+        </a>
+        {%- endif -%}
       </ul>
       {%- endif -%}
       {%- if site.plainwhite.navigation -%}
