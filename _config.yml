@@ -2,7 +2,7 @@ title: Hyooi의 데일리노트
 author: hyooi
 email: hyoin01@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
-  매일 뭔가를 하자는 마음가짐이라도 가지기 위한 데일리노트
+  매일 뭐라도 하기 위한 데일리노트
 show_excerpts: true # set to true to show excerpts on the homepage
 
 # Minima date format
@@ -19,20 +19,25 @@ plainwhite:
   portfolio_image: "assets/portfolio.png" # the path from the base directory of the site to the image to display (no / at the start)
   html_lang: "ko" # set the lang attribute of the <html> tag for the pages. See here for a list of codes: https://www.w3schools.com/tags/ref_country_codes.asp
   condensed_mobile:
-    #- home
+    - home
     - page
     - post
   # generate social links in footer
   social_links:
     github:  hyooi
     email: hyoin01@gmail.com
-
     # Mastodon instances
     # mastodon:
     # - username: jekyll
     #   instance: example.com
     # - username: jekyll2
     #   instance: example.com
+  disqus_shortname: games
+  navigation:
+    - title: My Work
+      url: "/my-work"
+    - title: Resume
+      url: "/resume"
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
