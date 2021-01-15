@@ -126,6 +126,13 @@
           </li>
         </a>
         {%- endif -%}
+        {%- if site.plainwhite.social_links.stackoverflow -%}
+        <a href="https://stackoverflow.com/users/{{ site.plainwhite.social_links.stackoverflow }}" target="_blank">
+          <li>
+            <i class="icon-stack-overflow"></i>
+          </li>
+        </a>
+        {%- endif -%}
       </ul>
       {%- endif -%}
       {%- if site.plainwhite.navigation -%}
