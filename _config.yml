@@ -43,6 +43,8 @@ plainwhite:
     #   instance: example.com
     # - username: jekyll2
     #   instance: example.com
+  portfolio_image:      "assets/portfolio.png"
+  dark_mode: true
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
@@ -55,6 +57,4 @@ theme: plainwhite
 plugins:
   - jekyll-seo-tag
 #  - jekyll-feed
-plainwhite:
-  portfolio_image:      "assets/portfolio.png"
-  dark_mode: true
+  
