@@ -19,7 +19,7 @@ plainwhite:
     Music
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
-  search: true # set to true to enable searchbar
+  search: false # set to true to enable searchbar
   dark_mode: true # set to true to add dark mode toggle
   analytics_id: "UA-168225977-1"
   # generate social links in footer
@@ -44,7 +44,6 @@ plainwhite:
     # - username: jekyll2
     #   instance: example.com
   portfolio_image:      "assets/portfolio.png"
-  dark_mode: true
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
