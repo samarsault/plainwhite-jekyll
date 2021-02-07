@@ -3,11 +3,7 @@
 /* Hack iOS Safari Unfocus */
 main {
   outline: none;
-}
-
-/* Click Anywhere to Unfocus */
-html, body {
-  height: 100%;
+  min-height: 100vh; // Click Anywhere to Unfocus
 }
 
 .posts-labelgroup {
