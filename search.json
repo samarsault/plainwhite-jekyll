@@ -1,0 +1,20 @@
+---
+layout: null
+sitemap:
+  exclude: 'yes'
+---
+[
+  {% for post in site.posts %}
+    {
+      "title"    : "{{ post.title | escape }}",
+      "title-lower"    : "{{ post.title | escape | downcase}}",
+      "sub-titile" : "{{ post.subtitle | escape }}",
+      "sub-titile-lower" : "{{ post.subtitle | escape | downcase}}",
+      "categories" : "{{ post.categories }}",
+      "tags"     : "{{ post.tags | join: ', ' }}",
+      "url"      : "{{ site.baseurl }}{{ post.url }}",
+      "date"     : "{{ post.date }}",
+      "content"     : "{{ post.content | strip_html | strip_newlines | remove_chars | escape | truncate:200 }}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

@@ -1,0 +1,130 @@
+/* Post Label And Search */
+
+/* Hack iOS Safari Unfocus */
+main {
+  outline: none;
+  min-height: 100vh; // Click Anywhere to Unfocus
+}
+
+.posts-labelgroup {
+  /* Firefox Flex Hack */
+  @-moz-document url-prefix() { 
+    align-items: center;
+  }
+
+  .search-section {
+    display: flex;
+    flex-grow: 1;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    align-items: center;
+    border-radius: 5px;
+  }
+
+  i {
+    color: #777;
+    flex-grow: 0;
+    padding: 0 8px;
+    transition: color 0.5s;
+    font-size: 15px;
+  }
+
+  input {
+    color: #555;
+    background-color: transparent;
+    font-size: 15px;
+    flex-grow: 1;
+    height: 39px;
+    border: none;
+    padding: 10px 0;
+    outline: none;
+    transition: color 0.5s;
+  }
+
+  .search-results {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    width: 100%;
+    min-height: 50px;
+    box-shadow: 0 1px 2px 0 rgba(32, 33, 36, 0.28);
+    z-index: 3;
+    padding: 10px 0;
+    font-size: 15px;
+    border: 1px solid rgba(223,225,229,0);
+
+    &:empty::before {
+      content: attr(data-placeholder);
+      padding: 8px 25px 8px 14px;
+    }
+
+    a {
+      padding: 8px 25px 8px 14px;
+      text-decoration: none;
+      display: flex;
+      background-color: transparent;
+
+      &:hover {
+        color: black;
+        background-color: #eee;
+      }
+
+      &::before {
+        content: '\e805';
+        font-family: "fontello";
+        font-style: normal;
+        speak: none;
+        display: inline-block;
+        text-decoration: inherit;
+        font-variant: normal;
+        text-transform: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-feature-settings: 'liga';
+        margin-right: 14px;
+        padding: 0 3px;
+        color: #9aa0a6;
+      }
+    }
+  }
+
+  .search-container {
+    display: block;
+    flex-grow: 1;
+    position: relative;
+  }
+
+  &:hover {
+
+    i {
+      color: $linkColor;
+    }
+  }
+
+  &.focus-within {
+
+    .search-section {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      box-shadow: 0 1px 2px 0 rgba(32,33,36,0.28);
+      border: 1px solid rgba(223,225,229,0);
+      border-bottom: solid 1px #eee;
+      z-index: 3;
+      margin: 0 auto;
+    }
+
+    input {
+      color: black;
+    }
+
+    i {
+      color: $linkColor;
+      padding: 0 14px;
+    }
+  }
+}
