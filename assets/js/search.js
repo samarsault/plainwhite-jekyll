@@ -2,9 +2,15 @@
 ---
 
 window.onload = function () {
-    var sjs = SimpleJekyllSearch({
-        searchInput: document.getElementById('searchbar'),
-        resultsContainer: document.getElementById('search-results'),
+    var $searchbar = document.getElementById('searchbar');
+    var $searchResults = document.getElementById('search-results');
+
+    if (!$searchbar || !$searchResults)
+        return;
+
+    SimpleJekyllSearch({
+        searchInput: $searchbar,
+        resultsContainer: $searchResults,
         json: '{{ "/search.json" | relative_url }}',
         searchResultTemplate: '<a href="{url}" target="_blank">{title}</a>',
         noResultsText: ''
@@ -15,10 +21,9 @@ window.onload = function () {
         document.body.firstElementChild.tabIndex = 1;
 
     var $labelGroup = document.querySelector(".posts-labelgroup");
-    var $searchbar = document.getElementById("searchbar");
     var $postLabel = document.getElementById("posts-label");
-    var $searchResults = document.querySelector(".search-results");
     var labelWidth = $postLabel.scrollWidth;
+
     $postLabel.style.width = labelWidth + "px";
 
     $labelGroup.addEventListener("click", function (e) {
