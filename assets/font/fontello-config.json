@@ -113,6 +113,18 @@
       "src": "fontawesome"
     },
     {
+      "uid": "ccc2329632396dc096bb638d4b46fb98",
+      "css": "mail-alt",
+      "code": 61664,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "e1597911f34fea0a188ae51fe4a2d9a9",
+      "css": "stackoverflow",
+      "code": 61804,
+      "src": "fontawesome"
+    },
+    {
       "uid": "1f1877aff7a2cd39092fcf73c3b5e7cb",
       "css": "github-circled",
       "code": 61595,

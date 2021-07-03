@@ -36,7 +36,7 @@ if ( (theme === null && userPrefersDark) || theme === 'dark') {
     };
 
     function toggleSwitch() {
-        document.querySelectorAll('#dark-mode-toggle').forEach(ti => ti.checked = true);
+        document.querySelectorAll('.dark-mode-toggle').forEach(ti => ti.checked = true);
     };
 
     // Attempt both requestAnimationFrame and DOMContentLoaded, whichever comes first.

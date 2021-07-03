@@ -29,7 +29,6 @@ plainwhite:
     twitter: samarsault
     github:  samarsault
     linkedIn: in/samarsault
-    #rss: rss
     #dribbble: jekyll
     #flickr:   jekyll
     #instagram: jekyll
@@ -39,6 +38,7 @@ plainwhite:
     #soundcloud: jekyll
     #telegram: jekyll
     #gitlab: jekyll
+    #email: jekyll
 
     # Mastodon instances
     # mastodon:
