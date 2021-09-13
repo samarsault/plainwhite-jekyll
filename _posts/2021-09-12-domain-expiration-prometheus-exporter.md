@@ -18,36 +18,38 @@ comments: true
 2. Создать визуализацию собранных метрик в grafana;
 3. Создать алерты о приближении времени истечания домена.
 
-В случае использовании kubernetes и установленного [prometheus-stask chart'a](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) задача значительно упрощается. Можно воспользоваться helm chart'ом [domain-exporter](https://github.com/zifter/helm-charts/tree/main/charts/domain-exporter), который из коробки предоставит всё необходимое. Установить чарт просто:
+В случае использовании kubernetes и установленного [prometheus-stack chart'a](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack) задача значительно упрощается. Можно воспользоваться helm chart'ом [domain-exporter](https://github.com/zifter/helm-charts/tree/main/charts/domain-exporter), который из коробки предоставит всё необходимое. Установить чарт просто:
 1. Нужно добавить helm репозиторий локально
 ```bash
 helm repo add zifter https://zifter.github.io/helm-charts/
 ```
 
-1. Установить чарт с интересующими доменами:
-```bash
-helm install domain-exporter zifter/domain-exporter --namespace monitoring --set "domains={aliexpress.ru,amazon.com,amazon.pl,censor.net,domain-is-not-found.net}"
-```
-Домены можно указать и через values.yaml файл:
-```bash
-helm install domain-exporter zifter/domain-exporter --namespace monitoring -f values-prod.yaml
-```
-Где values-prod.yaml:
-```yaml
-domains:
-  - google.com
-  - habr.ru
-  - github.com
-  - vaikutis.lt
-  - amazon.pl
-  - amazon.com
-  - amazon.de
-  - ok.ru
-  - flibusta.site
-  - domain-failed.com
-  - viva64.com
-  - ted.com
-```
+* Установить чарт с интересующими доменами:
+  - Через --set
+  ```bash
+  helm install domain-exporter zifter/domain-exporter --namespace monitoring --set "domains={aliexpress.ru,amazon.com,amazon.pl,censor.net,domain-is-not-found.net}"
+  ```
+  - Через values.yaml файл:
+  ```bash
+  helm install domain-exporter zifter/domain-exporter --namespace monitoring -f values-prod.yaml
+  ```
+    Где values-prod.yaml:
+
+  ```yaml
+  domains:
+    - google.com
+    - habr.ru
+    - github.com
+    - vaikutis.lt
+    - amazon.pl
+    - amazon.com
+    - amazon.de
+    - ok.ru
+    - flibusta.site
+    - domain-failed.com
+    - viva64.com
+    - ted.com
+  ```
 
 В результате получаете:
 * метрики:
