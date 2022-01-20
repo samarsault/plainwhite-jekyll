@@ -208,6 +208,8 @@ Your theme is setup just like a normal Jekyll site! To test your theme, run `bun
 When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
 To add a custom directory to your theme-gem, please edit the regexp in `plainwhite.gemspec` accordingly.
 
+To add icons use [fontello](https://fontello.com/) to generate the font and then replace the files in `/assets/fonts/` and `_sass/ext/_fonts.scss`.
+
 ## Donation
 If this project help you reduce time to develop, you can give me a cup of coffee :) 
 

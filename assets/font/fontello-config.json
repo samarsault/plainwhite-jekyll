@@ -43,12 +43,6 @@
       "src": "fontawesome"
     },
     {
-      "uid": "a9862b9d5197886c1ad693ecd7120b31",
-      "css": "youtube",
-      "code": 61799,
-      "src": "fontawesome"
-    },
-    {
       "uid": "199c44bca402ec5a6351f75ba5228375",
       "css": "dribbble",
       "code": 61821,
@@ -81,20 +75,6 @@
       ]
     },
     {
-      "uid": "26780f48c9ebffeab4e0402830aa8aa1",
-      "css": "calendar-1",
-      "code": 59393,
-      "src": "custom_icons",
-      "selected": true,
-      "svg": {
-        "path": "M71 929H232V768H71V929ZM268 929H446V768H268V929ZM71 732H232V554H71V732ZM268 732H446V554H268V732ZM71 518H232V357H71V518ZM482 929H661V768H482V929ZM268 518H446V357H268V518ZM696 929H857V768H696V929ZM482 732H661V554H482V732ZM286 250V89Q286 82 280 77T268 71H232Q225 71 220 77T214 89V250Q214 257 220 263T232 268H268Q275 268 280 263T286 250ZM696 732H857V554H696V732ZM482 518H661V357H482V518ZM696 518H857V357H696V518ZM714 250V89Q714 82 709 77T696 71H661Q654 71 648 77T643 89V250Q643 257 648 263T661 268H696Q704 268 709 263T714 250ZM929 214V929Q929 958 907 979T857 1000H71Q42 1000 21 979T0 929V214Q0 185 21 164T71 143H143V89Q143 52 169 26T232 0H268Q305 0 331 26T357 89V143H571V89Q571 52 598 26T661 0H696Q733 0 760 26T786 89V143H857Q886 143 907 164T929 214Z",
-        "width": 928.6
-      },
-      "search": [
-        "calendar"
-      ]
-    },
-    {
       "uid": "b86600decaba538aca184421752cd640",
       "css": "soundcloud",
       "code": 62280,
@@ -113,20 +93,82 @@
       "src": "fontawesome"
     },
     {
-      "uid": "ccc2329632396dc096bb638d4b46fb98",
-      "css": "mail-alt",
-      "code": 61664,
-      "src": "fontawesome"
-    },
-    {
       "uid": "e1597911f34fea0a188ae51fe4a2d9a9",
       "css": "stackoverflow",
       "code": 61804,
       "src": "fontawesome"
     },
     {
+      "uid": "de5f0a564ccf8816325330e292e11533",
+      "css": "rss-squared",
+      "code": 61763,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "9daa1fdf0838118518a7e22715e83abc",
+      "css": "file-pdf",
+      "code": 61889,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "ab95e1351ebaec5850101097cbf7097f",
+      "css": "quote-left",
+      "code": 61709,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "d745d7c05b94e609decabade2cae12cb",
+      "css": "quote-right",
+      "code": 61710,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "0ece9a12de796b8411f868d582bee678",
+      "css": "github-squared",
+      "code": 62208,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "17c21cd98db80e521e573eba247bd69b",
+      "css": "mail-squared",
+      "code": 61849,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "b6d6b3561d705330c7ad2155e8ee94ba",
+      "css": "stackexchange",
+      "code": 61837,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "e331ff486a299c6bdf0056426c8fac53",
+      "css": "youtube-squared",
+      "code": 61798,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "4c1f3c0b331d5f72c6a38d7bb7632675",
+      "css": "share-squared",
+      "code": 61921,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "26780f48c9ebffeab4e0402830aa8aa1",
+      "css": "calendar-1",
+      "code": 59393,
+      "src": "custom_icons",
+      "selected": false,
+      "svg": {
+        "path": "M71 929H232V768H71V929ZM268 929H446V768H268V929ZM71 732H232V554H71V732ZM268 732H446V554H268V732ZM71 518H232V357H71V518ZM482 929H661V768H482V929ZM268 518H446V357H268V518ZM696 929H857V768H696V929ZM482 732H661V554H482V732ZM286 250V89Q286 82 280 77T268 71H232Q225 71 220 77T214 89V250Q214 257 220 263T232 268H268Q275 268 280 263T286 250ZM696 732H857V554H696V732ZM482 518H661V357H482V518ZM696 518H857V357H696V518ZM714 250V89Q714 82 709 77T696 71H661Q654 71 648 77T643 89V250Q643 257 648 263T661 268H696Q704 268 709 263T714 250ZM929 214V929Q929 958 907 979T857 1000H71Q42 1000 21 979T0 929V214Q0 185 21 164T71 143H143V89Q143 52 169 26T232 0H268Q305 0 331 26T357 89V143H571V89Q571 52 598 26T661 0H696Q733 0 760 26T786 89V143H857Q886 143 907 164T929 214Z",
+        "width": 928.6
+      },
+      "search": [
+        "calendar"
+      ]
+    },
+    {
       "uid": "1f1877aff7a2cd39092fcf73c3b5e7cb",
-      "css": "github-circled",
+      "css": "github-circled-1",
       "code": 61595,
       "src": "custom_icons",
       "selected": false,
@@ -140,7 +182,7 @@
     },
     {
       "uid": "c11ff28bd5952cf3f8fde53106c1f264",
-      "css": "pinterest-squared",
+      "css": "pinterest-squared-1",
       "code": 61651,
       "src": "custom_icons",
       "selected": false,
@@ -154,7 +196,7 @@
     },
     {
       "uid": "9da2fbf959f6a46cecb184d8ce8a946f",
-      "css": "youtube",
+      "css": "youtube-1",
       "code": 61799,
       "src": "custom_icons",
       "selected": false,
@@ -168,7 +210,7 @@
     },
     {
       "uid": "15181978a747995fe1633ad28b6ae367",
-      "css": "instagram",
+      "css": "instagram-1",
       "code": 61805,
       "src": "custom_icons",
       "selected": false,
@@ -182,7 +224,7 @@
     },
     {
       "uid": "3caed0e59d10d08f954176c133c9a97e",
-      "css": "flickr",
+      "css": "flickr-1",
       "code": 61806,
       "src": "custom_icons",
       "selected": false,
@@ -196,7 +238,7 @@
     },
     {
       "uid": "f6b9f865160c1592992c1c667878a429",
-      "css": "dribbble",
+      "css": "dribbble-1",
       "code": 61821,
       "src": "custom_icons",
       "selected": false,
@@ -210,7 +252,7 @@
     },
     {
       "uid": "c56117c12f520ffd7bc4258105371001",
-      "css": "twitter-squared",
+      "css": "twitter-squared-1",
       "code": 62212,
       "src": "custom_icons",
       "selected": false,
@@ -224,7 +266,7 @@
     },
     {
       "uid": "7616a1175ef5c5701831c9653d9a5198",
-      "css": "facebook-squared",
+      "css": "facebook-squared-1",
       "code": 62216,
       "src": "custom_icons",
       "selected": false,
@@ -239,7 +281,7 @@
     {
       "uid": "cb9a04e90d634d6b92e1412678342bce",
       "css": "linkedin-squared-1",
-      "code": 59393,
+      "code": 128197,
       "src": "custom_icons",
       "selected": false,
       "svg": {
