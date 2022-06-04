@@ -1,6 +1,6 @@
-title: Your awesome title
+title: Development/Creative everything what you think
 author: GitHub User
-email: your-email@domain.com
+email: devempt@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -53,7 +53,7 @@ plainwhite:
 # - about.md
 
 # Build settings
-theme: plainwhite
+theme: samarsault/plainwhite-jekyll
 
 plugins:
   - jekyll-seo-tag
