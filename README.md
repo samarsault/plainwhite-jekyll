@@ -112,7 +112,7 @@ show_excerpts: true
 
 **Navigation**
 
-Navigation can be enabled by adding the following line to your `_config.yml`
+Navigation can be enabled by adding the following line to your `_config.yml` [Click Here](https://www.scaler.com/topics/nav-tag-in-html/) to know more about navigation tags.
 
 ```yaml
 plainwhite:
