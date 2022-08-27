@@ -139,9 +139,11 @@
       <nav class="navigation about-footer {{condensed_class}}">
         <ul>
           {% for link in site.plainwhite.navigation %}
-          <li>
-            <a href="{{ link.url }}">{{ link.title }}</a>
-          </li>
+          {%- if link.url contains "://" -%}
+          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+          {%- else -%}
+          <li><a href="{{ site.url }}{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a></li>
+          {%- endif -%}
           {% endfor %}
         </ul>
       </nav>
