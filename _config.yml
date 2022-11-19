@@ -43,9 +43,9 @@ plainwhite:
     # Mastodon instances
     # mastodon:
     # - username: jekyll
-    #   instance: example.com
+    #   instance: mastodon.world
     # - username: jekyll2
-    #   instance: example.com
+    #   instance: mastodon.online
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
