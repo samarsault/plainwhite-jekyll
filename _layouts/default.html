@@ -133,6 +133,13 @@
           </li>
         </a>
         {%- endif -%}
+        {% for profile in site.plainwhite.social_links.mastodon %}
+        <a rel="me" href="https://{{profile.instance}}/@{{ profile.username}}" target="_blank">
+            <li>
+                <i class="icon-mastodon"></i>
+            </li>
+        </a>
+        {%- endfor -%}
       </ul>
       {%- endif -%}
       {%- if site.plainwhite.navigation -%}
