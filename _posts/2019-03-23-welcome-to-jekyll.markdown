@@ -21,6 +21,21 @@ rzp.capture(payment_id, cost)
 	})
 ```
 
+$$
+	Latex \space supported: A =
+	\left[
+	\begin{matrix}
+	a_{11}&a_{12}&\cdots&a_{1n}\\
+	a_{21}\\
+	\vdots&&\ddots\\
+	a_{n1}&&&a_{nn}
+	\end{matrix}
+	\right]
+	，\mathbf{w}_i^0 = \frac{(\prod_{j=1}^na_{ij})^{\frac{1}{n}}}{\sum_{i=1}^n (\prod_{j=1}^n a_{i,j})^{\frac{1}{n}}},n=1,2,\cdots,n
+$$
+
+Inline latex supported: $\mathbf{λ_{mi}}+\mathbf{λ_{max}}$
+
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
