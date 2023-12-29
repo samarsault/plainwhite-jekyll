@@ -2,9 +2,7 @@ title: Souvik Saha's Web Blog
 author: Souvik Saha
 email: souvikssaha@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+ I am a student of Information Technology at the University of Stuttgart with a passion for sensors, AI, embedded systems, low powered devices, and consumer electronics. I have worked in health tech start-ups for 4 years in India and have experience with C, Python, and Rust programming languages. I am familiar with STM32, NXP, Linux, and Yocto. I have also written two open-source libraries for the Arduino, MCP3202, and DAC7611. Outside of work, I enjoy running, working out, hiking, tennis, football, and squash
 show_excerpts: true # set to true to show excerpts on the homepage
 
 # Minima date format
@@ -34,7 +32,7 @@ plainwhite:
     # pinterest: jekyll
     # youtube: jekyll
     # facebook: jekyll
-    soundcloud: souvik-saha-10
+    email: souvikssaha@gmail.com
     # telegram: jekyll
 
     # Mastodon instances
